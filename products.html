@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Auravale Academy</title>
+  <meta name="description" content="Explore Auravale Academy's full range of English learning books, workbooks, phonics readers, TOEIC prep, and teacher resources for Indonesian learners." />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0d5675;
+      --teal: #1cb5c8;
+      --light-teal: #4ad3de;
+      --pale: #7fe3e9;
+      --bg: #eaf8fb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: rgba(13, 86, 117, 0.97);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--light-teal); }
+
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+    nav a.active { color: var(--light-teal); }
+
+    .nav-cta {
+      background: var(--teal) !important;
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-cta:hover { background: var(--light-teal) !important; }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a3d52 100%);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 span { color: var(--light-teal); }
+
+    .page-hero p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* FILTER TABS */
+    .filter-section {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e8f4f8;
+      position: sticky;
+      top: 68px;
+      z-index: 50;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.25rem;
+      border-radius: 50px;
+      border: 1.5px solid #e0f0f5;
+      background: #fff;
+      color: #666;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff;
+    }
+
+    /* PRODUCTS SECTION */
+    .products-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-sub {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .product-group {
+      margin-bottom: 4rem;
+    }
+
+    .product-group.hidden { display: none; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* PRODUCT CARD */
+    .product-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #e8f4f8;
+      transition: border-color 0.3s;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .product-card:hover { border-color: var(--teal); }
+
+    .card-top {
+      background: var(--bg);
+      padding: 2rem 1.5rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .card-top.navy-bg { background: rgba(13,86,117,0.07); }
+    .card-top.teal-bg { background: var(--bg); }
+    .card-top.warm-bg { background: #fff8f0; }
+
+    .card-emoji {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-available { background: #dcfce7; color: #15803d; }
+    .badge-new { background: #dbeafe; color: #1d4ed8; }
+    .badge-coming { background: #fef3c7; color: #92400e; }
+    .badge-submitted { background: #ede9fe; color: #6d28d9; }
+
+    .card-body { padding: 1.25rem 1.5rem 1.5rem; }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .meta-tag {
+      display: inline-block;
+      background: var(--bg);
+      color: var(--navy);
+      padding: 0.2rem 0.7rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-shopee {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      background: #ee4d2d;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .btn-shopee:hover { background: #d63d1f; transform: translateY(-1px); }
+
+    .btn-tokopedia {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      background: #42b549;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .btn-tokopedia:hover { background: #369e3c; transform: translateY(-1px); }
+
+    .btn-notify {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--teal);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-notify:hover {
+      background: var(--bg);
+      transform: translateY(-1px);
+    }
+
+    .btn-contact {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-contact:hover { background: #0a3d52; transform: translateY(-1px); }
+
+    /* B2B BANNER */
+    .b2b-banner {
+      background: linear-gradient(135deg, var(--navy), #0a3d52);
+      border-radius: 20px;
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+
+    .b2b-banner h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .b2b-banner p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .btn-b2b {
+      padding: 0.85rem 2rem;
+      background: var(--teal);
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .btn-b2b:hover { background: var(--light-teal); transform: translateY(-2px); }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      z-index: 999;
+      transition: all 0.2s;
+    }
+
+    .whatsapp:hover { transform: scale(1.1); }
+    .whatsapp svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ANIMATIONS */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .filter-section { top: 60px; }
+      .b2b-banner { text-align: center; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="logo">Auravale<span>Academy</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Our <span>Learning Tools</span></h1>
+    <p>Books, workbooks, and resources built with neuroscience, CEFR alignment, and real Indonesian learners in mind.</p>
+  </section>
+
+  <!-- FILTER TABS -->
+  <div class="filter-section">
+    <button class="filter-btn active" onclick="filterProducts('all')">All products</button>
+    <button class="filter-btn" onclick="filterProducts('young')">Young learners</button>
+    <button class="filter-btn" onclick="filterProducts('teens')">Teens</button>
+    <button class="filter-btn" onclick="filterProducts('exam')">Exam prep</button>
+    <button class="filter-btn" onclick="filterProducts('teachers')">Teachers</button>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="products-section">
+
+    <!-- YOUNG LEARNERS -->
+    <div class="product-group fade-up" id="group-young">
+      <div class="section-label">Ages 2–12</div>
+      <div class="section-title">Young learners</div>
+      <div class="section-sub">Phonics, ABC, and early English — designed for little hands and big imaginations.</div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-top teal-bg">
+            <div class="card-emoji">📗</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Little Lights — ABC Readers</div>
+            </div>
+            <span class="card-badge badge-available">Available</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">26 beautifully illustrated ABC readers — one for every letter. Perfect for ages 2–6 learning their first sounds.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Ages 2–6</span>
+              <span class="meta-tag">26 books</span>
+              <span class="meta-tag">Phonics</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://shopee.co.id" target="_blank" class="btn-shopee">🛒 Shopee</a>
+              <a href="https://tokopedia.com" target="_blank" class="btn-tokopedia">🛒 Tokopedia</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top teal-bg">
+            <div class="card-emoji">📘</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Little Lights — Phonics Readers</div>
+            </div>
+            <span class="card-badge badge-available">Available</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">48 phonics readers covering every sound combination. Neuroscience-informed repetition builds fluency naturally.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Ages 4–8</span>
+              <span class="meta-tag">48 books</span>
+              <span class="meta-tag">Phonics</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://shopee.co.id" target="_blank" class="btn-shopee">🛒 Shopee</a>
+              <a href="https://tokopedia.com" target="_blank" class="btn-tokopedia">🛒 Tokopedia</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top teal-bg">
+            <div class="card-emoji">✏️</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Little Lights Workbooks</div>
+            </div>
+            <span class="card-badge badge-available">Available</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">Fine motor skills, pre-writing, and early phonics. Three age editions: Ages 2, Ages 3, and Ages 4/5.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Ages 2–5</span>
+              <span class="meta-tag">3 editions</span>
+              <span class="meta-tag">Workbook</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://shopee.co.id" target="_blank" class="btn-shopee">🛒 Shopee</a>
+              <a href="https://tokopedia.com" target="_blank" class="btn-tokopedia">🛒 Tokopedia</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top warm-bg">
+            <div class="card-emoji">🏡</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Flicker Home Workbook Series</div>
+            </div>
+            <span class="card-badge badge-available">Available</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">60-page bilingual parent-child workbooks. Learning that happens at home, together. English and Bahasa Indonesia.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Family</span>
+              <span class="meta-tag">Bilingual</span>
+              <span class="meta-tag">60 pages</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://shopee.co.id" target="_blank" class="btn-shopee">🛒 Shopee</a>
+              <a href="https://tokopedia.com" target="_blank" class="btn-tokopedia">🛒 Tokopedia</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TEENS -->
+    <div class="product-group fade-up" id="group-teens">
+      <div class="section-label">Ages 12–16</div>
+      <div class="section-title">Middle years & teens</div>
+      <div class="section-sub">Bridge materials for the forgotten age group — too old for phonics books, not yet ready for exam prep.</div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-top navy-bg">
+            <div class="card-emoji">📖</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Fluent Foundations: Middle Years</div>
+            </div>
+            <span class="card-badge badge-coming">Coming soon</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">Short fiction and nonfiction readers for ages 13–16 with glossed vocabulary, comprehension scaffolds, and self-tracking rubrics.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Ages 13–16</span>
+              <span class="meta-tag">CEFR B1</span>
+              <span class="meta-tag">Readers</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Notify me when available</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top navy-bg">
+            <div class="card-emoji">🎨</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Creative Journal Kits for Teens</div>
+            </div>
+            <span class="card-badge badge-coming">Coming soon</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">Prompted creative writing, visual poetry tasks, and collage-based emotional literacy. English learning that speaks to teen identity.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Ages 13–16</span>
+              <span class="meta-tag">Creative</span>
+              <span class="meta-tag">Journal</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Notify me when available</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- EXAM PREP -->
+    <div class="product-group fade-up" id="group-exam">
+      <div class="section-label">University & Adults</div>
+      <div class="section-title">Exam preparation</div>
+      <div class="section-sub">Fast, science-backed prep for TOEIC and IELTS. Built for students who need results, not filler.</div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-top navy-bg">
+            <div class="card-emoji">🎯</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">CRAMwise TOEIC — Volume 1</div>
+            </div>
+            <span class="card-badge badge-submitted">At publisher</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">Neuroscience-informed TOEIC prep. Fast cram-style format designed for real Indonesian students under time pressure.</div>
+            <div class="card-meta">
+              <span class="meta-tag">TOEIC</span>
+              <span class="meta-tag">Adults</span>
+              <span class="meta-tag">CEFR B1–B2</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Join waitlist</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top navy-bg">
+            <div class="card-emoji">🎯</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">CRAMwise TOEIC — Volume 2</div>
+            </div>
+            <span class="card-badge badge-submitted">At publisher</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">Volume 2 of the CRAMwise series. Builds on Volume 1 with advanced listening and reading comprehension strategies.</div>
+            <div class="card-meta">
+              <span class="meta-tag">TOEIC</span>
+              <span class="meta-tag">Adults</span>
+              <span class="meta-tag">Advanced</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Join waitlist</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top navy-bg">
+            <div class="card-emoji">🎯</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">CRAMwise TOEIC — Volume 3</div>
+            </div>
+            <span class="card-badge badge-submitted">At publisher</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">The complete CRAMwise system. Full test simulation, timing strategies, and score-maximising techniques.</div>
+            <div class="card-meta">
+              <span class="meta-tag">TOEIC</span>
+              <span class="meta-tag">Adults</span>
+              <span class="meta-tag">Full series</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Join waitlist</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TEACHERS -->
+    <div class="product-group fade-up" id="group-teachers">
+      <div class="section-label">Educators</div>
+      <div class="section-title">Teacher resources</div>
+      <div class="section-sub">Ready-to-use tools for Indonesian English teachers — designed for classrooms with no budget and 40 students.</div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-top teal-bg">
+            <div class="card-emoji">🖨️</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Printable Class Packs</div>
+            </div>
+            <span class="card-badge badge-available">Available</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">A4, black-and-white, rural-school friendly. Worksheets, word walls, and activities ready to print and use tomorrow.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Teachers</span>
+              <span class="meta-tag">Printable</span>
+              <span class="meta-tag">All levels</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://shopee.co.id" target="_blank" class="btn-shopee">🛒 Shopee</a>
+              <a href="https://tokopedia.com" target="_blank" class="btn-tokopedia">🛒 Tokopedia</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top warm-bg">
+            <div class="card-emoji">📋</div>
+            <div>
+              <div class="card-title" style="margin-top:0.3rem">Parent Companion Books</div>
+            </div>
+            <span class="card-badge badge-coming">Coming soon</span>
+          </div>
+          <div class="card-body">
+            <div class="card-desc">One-page-per-week guides for parents. How to ask your child about what they read, phonics games for the car, home practice made simple.</div>
+            <div class="card-meta">
+              <span class="meta-tag">Parents</span>
+              <span class="meta-tag">Bilingual</span>
+              <span class="meta-tag">Home use</span>
+            </div>
+            <div class="card-actions">
+              <a href="contact.html" class="btn-notify">Notify me when available</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- B2B BANNER -->
+      <div class="b2b-banner fade-up">
+        <div>
+          <h3>Buying for a school or institution?</h3>
+          <p>We offer bulk pricing, CEFR-aligned catalogue documentation, and Kurikulum Merdeka alignment notes for schools, NGOs, and procurement teams across Indonesia.</p>
+        </div>
+        <a href="contact.html" class="btn-b2b">Contact us for schools →</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- WHATSAPP -->
+  <a class="whatsapp" href="https://wa.me/" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Filter products
+    function filterProducts(category) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const groups = {
+        all: ['young','teens','exam','teachers'],
+        young: ['young'],
+        teens: ['teens'],
+        exam: ['exam'],
+        teachers: ['teachers']
+      };
+
+      ['young','teens','exam','teachers'].forEach(g => {
+        const el = document.getElementById('group-' + g);
+        if (groups[category].includes(g)) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+
+    // Scroll fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 100);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // 3D tilt on product cards
+    VanillaTilt.init(document.querySelectorAll('.product-card'), {
+      max: 8,
+      speed: 400,
+      glare: false,
+      scale: 1.02
+    });
+  </script>
+</body>
+</html>
