@@ -1337,12 +1337,6 @@ footer.site-footer::before{
       form.addEventListener('submit', async function(e){
         e.preventDefault();
 
-        if (form.action.includes('mqewlqya')){
-          status.className = 'form-status error';
-          status.textContent = 'Form not yet connected. Sign up at formspree.io and replace mqewlqya in contact.html.';
-          return;
-        }
-
         btn.disabled = true;
         btn.innerHTML = 'Sending…';
         status.className = 'form-status';
