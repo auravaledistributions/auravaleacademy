@@ -459,7 +459,7 @@ footer.site-footer::before{
   .fbot{flex-direction:column;align-items:flex-start;gap:.3rem}
 }
 
-</style>
+  </style>
 
   <!-- TODO: GA4 when ready
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA4_MEASUREMENT_ID"></script>
@@ -850,10 +850,17 @@ footer.site-footer::before{
     .who-row:hover::before{transform:scaleY(1)}
 
     .who-icon{
-      font-size:1.4rem;
       flex-shrink:0;
-      opacity:.85;
+      width:32px;
+      height:32px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:.9;
+      transition:opacity .3s;
     }
+    .who-icon svg{width:100%;height:100%;display:block}
+    .who-row:hover .who-icon{opacity:1}
     .who-copy{flex:1;min-width:0}
     .who-if{
       font-family:var(--serif);
@@ -964,8 +971,8 @@ footer.site-footer::before{
           message that lands here.
         </p>
         <div class="hero-ctas rev d3">
-          <!-- TODO: replace WHATSAPP_NUMBER with real number, e.g. 628123456789 -->
-          <a href="https://wa.me/WHATSAPP_NUMBER?text=Hi%20Auravale%2C%20I%27d%20like%20to%20ask%20about..." target="_blank" rel="noopener" class="cta-wa">
+          <!-- TODO: replace 6281214295431 with real number, e.g. 628123456789 -->
+          <a href="https://wa.me/6281214295431?text=Hi%20Auravale%2C%20I%27d%20like%20to%20ask%20about..." target="_blank" rel="noopener" class="cta-wa">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat on WhatsApp
           </a>
@@ -1050,9 +1057,9 @@ footer.site-footer::before{
                 is fine. A story is better.
               </p>
 
-              <!-- TODO: Replace FORMSPREE_ENDPOINT with your real Formspree form URL from formspree.io.
+              <!-- TODO: Replace mqewlqya with your real Formspree form URL from formspree.io.
                    Example: action="https://formspree.io/f/abcd1234" -->
-              <form id="contactForm" action="https://formspree.io/f/FORMSPREE_ENDPOINT" method="POST">
+              <form id="contactForm" action="https://formspree.io/f/mqewlqya" method="POST">
 
                 <div class="form-group">
                   <label class="form-label" for="f-name">Your name</label>
@@ -1116,7 +1123,7 @@ footer.site-footer::before{
         <div class="who-rows">
 
           <a href="products.html#young-learners" class="who-row rev d1">
-            <span class="who-icon">👨‍👩‍👧</span>
+            <span class="who-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="12" cy="11" r="1.8" fill="#A8EEF0" opacity="0.85"/><circle cx="12" cy="11" r="3.8" fill="#A8EEF0" opacity="0.15"/><circle cx="20" cy="11" r="1.5" fill="#A8EEF0" opacity="0.75"/><circle cx="20" cy="11" r="3.2" fill="#A8EEF0" opacity="0.13"/><circle cx="16" cy="21" r="1.6" fill="#A8EEF0" opacity="0.75"/><circle cx="16" cy="21" r="3.3" fill="#A8EEF0" opacity="0.13"/><line x1="12" y1="11" x2="16" y2="21" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2"/><line x1="20" y1="11" x2="16" y2="21" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2"/><line x1="12" y1="11" x2="20" y2="11" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2"/></svg></span>
             <div class="who-copy">
               <div class="who-if">If you're a <em>parent</em> with a little one at home —</div>
               <div class="who-then">Our Little Lights phonics readers and bilingual Flicker Home workbooks are probably what you're looking for.</div>
@@ -1125,7 +1132,7 @@ footer.site-footer::before{
           </a>
 
           <a href="products.html#exam-prep" class="who-row rev d2">
-            <span class="who-icon">🎯</span>
+            <span class="who-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="2.5" fill="#A8EEF0" opacity="0.95"/><circle cx="16" cy="16" r="5" fill="#A8EEF0" opacity="0.18"/><circle cx="16" cy="16" r="9" stroke="#A8EEF0" stroke-width="0.8" opacity="0.35" fill="none"/><circle cx="16" cy="16" r="13" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2" fill="none"/></svg></span>
             <div class="who-copy">
               <div class="who-if">If you're a <em>student</em> chasing a TOEIC score —</div>
               <div class="who-then">CRAMwise is our neuroscience-informed cram series. Volumes 1, 2, and 3 — in that order, or pick your battle.</div>
@@ -1134,7 +1141,7 @@ footer.site-footer::before{
           </a>
 
           <a href="products.html#teachers" class="who-row rev d3">
-            <span class="who-icon">📚</span>
+            <span class="who-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M 6 11 Q 11 9 16 11 Q 21 9 26 11 L 26 22 Q 21 20 16 22 Q 11 20 6 22 Z" stroke="#A8EEF0" stroke-width="1" opacity="0.5" fill="none"/><line x1="16" y1="11" x2="16" y2="22" stroke="#A8EEF0" stroke-width="0.7" opacity="0.4"/><circle cx="16" cy="11" r="1.2" fill="#A8EEF0" opacity="0.8"/><circle cx="16" cy="11" r="2.8" fill="#A8EEF0" opacity="0.18"/></svg></span>
             <div class="who-copy">
               <div class="who-if">If you're a <em>teacher</em> with too many students and too few resources —</div>
               <div class="who-then">Our printable class packs are A4, ready to run, and designed for real Indonesian classrooms.</div>
@@ -1143,7 +1150,7 @@ footer.site-footer::before{
           </a>
 
           <a href="schools.html" class="who-row rev d4">
-            <span class="who-icon">🏫</span>
+            <span class="who-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M 4 22 L 11 14 L 16 19 L 22 10 L 28 22" stroke="#A8EEF0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" fill="none"/><circle cx="22" cy="10" r="1.3" fill="#A8EEF0" opacity="0.9"/><circle cx="22" cy="10" r="3" fill="#A8EEF0" opacity="0.2"/></svg></span>
             <div class="who-copy">
               <div class="who-if">If you're from a <em>school</em> looking at materials —</div>
               <div class="who-then">CEFR-aligned, Kurikulum Merdeka-referenced, bulk pricing available. Let's talk properly.</div>
@@ -1152,7 +1159,7 @@ footer.site-footer::before{
           </a>
 
           <a href="wholesale.html" class="who-row rev d5">
-            <span class="who-icon">📦</span>
+            <span class="who-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><circle cx="8" cy="10" r="1.6" fill="#A8EEF0" opacity="0.8"/><circle cx="24" cy="11" r="1.4" fill="#A8EEF0" opacity="0.7"/><circle cx="16" cy="22" r="1.8" fill="#A8EEF0" opacity="0.9"/><circle cx="16" cy="22" r="3.5" fill="#A8EEF0" opacity="0.15"/><line x1="8" y1="10" x2="16" y2="22" stroke="#A8EEF0" stroke-width="0.7" opacity="0.35"/><line x1="24" y1="11" x2="16" y2="22" stroke="#A8EEF0" stroke-width="0.7" opacity="0.35"/><line x1="8" y1="10" x2="24" y2="11" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2"/></svg></span>
             <div class="who-copy">
               <div class="who-if">If you're a <em>distributor or bookstore</em> —</div>
               <div class="who-then">We partner with thoughtful retailers across Southeast Asia. Wholesale pricing, full catalogue.</div>
@@ -1177,8 +1184,8 @@ footer.site-footer::before{
           we think matters — and every message helps us do it better.
         </p>
         <div class="rev d2">
-          <!-- TODO: replace WHATSAPP_NUMBER -->
-          <a href="https://wa.me/WHATSAPP_NUMBER" target="_blank" rel="noopener" class="cta-wa">
+          <!-- TODO: replace 6281214295431 -->
+          <a href="https://wa.me/6281214295431" target="_blank" rel="noopener" class="cta-wa">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Start a conversation
           </a>
@@ -1216,8 +1223,8 @@ footer.site-footer::before{
         <a href="contact.html">Contact</a>
         <a href="free-resources.html">Free resources</a>
         <a href="https://instagram.com/auravaleacademy" target="_blank" rel="noopener">Instagram</a>
-        <!-- TODO: replace WHATSAPP_NUMBER -->
-        <a href="https://wa.me/WHATSAPP_NUMBER" target="_blank" rel="noopener">WhatsApp</a>
+        <!-- TODO: replace 6281214295431 -->
+        <a href="https://wa.me/6281214295431" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="fbot">
@@ -1227,8 +1234,8 @@ footer.site-footer::before{
   </footer>
 
   <!-- Floating WhatsApp -->
-  <!-- TODO: replace WHATSAPP_NUMBER -->
-  <a class="wa" href="https://wa.me/WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <!-- TODO: replace 6281214295431 -->
+  <a class="wa" href="https://wa.me/6281214295431" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
@@ -1317,7 +1324,7 @@ footer.site-footer::before{
 
 })();
 
-</script>
+  </script>
 
   <!-- Form AJAX submission — keeps user on page -->
   <script>
@@ -1330,9 +1337,9 @@ footer.site-footer::before{
       form.addEventListener('submit', async function(e){
         e.preventDefault();
 
-        if (form.action.includes('FORMSPREE_ENDPOINT')){
+        if (form.action.includes('mqewlqya')){
           status.className = 'form-status error';
-          status.textContent = 'Form not yet connected. Sign up at formspree.io and replace FORMSPREE_ENDPOINT in contact.html.';
+          status.textContent = 'Form not yet connected. Sign up at formspree.io and replace mqewlqya in contact.html.';
           return;
         }
 
