@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Auravale Academy</title>
+  <meta name="description" content="English books made for Indonesian children — same rigor as imported editions, built for the world they actually live in, priced for the families who'll actually read them.">
+
+  <meta property="og:title" content="About — Auravale Academy">
+  <meta property="og:description" content="English books made for Indonesian children — same rigor as imported editions, priced for the families who'll read them.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://auravaleacademy.com/about.html">
+  <meta property="og:site_name" content="Auravale Academy">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════════
+   AURAVALE ACADEMY — about.html
+   Design system inherited from contact.html / index.html
+   "Build tools. Spark change."
+   ═══════════════════════════════════════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --teal:        #00B5B8;
+  --aqua:        #00D4D4;
+  --sky:         #7DE8E8;
+  --mist:        #E8F9F9;
+  --navy-void:   #03060c;
+  --navy-deep:   #050912;
+  --navy-mid:    #0a1628;
+  --navy-brand:  #1A3A5C;
+  --serif:       "Cormorant Garamond", Georgia, serif;
+  --sans:        "DM Sans", -apple-system, system-ui, sans-serif;
+  --ink-1:       #f0f8fc;
+  --ink-2:       rgba(240,248,252,.75);
+  --ink-3:       rgba(240,248,252,.48);
+  --ink-4:       rgba(240,248,252,.28);
+}
+html{background:var(--navy-void)}
+body{
+  font-family:var(--sans);
+  background:var(--navy-void);
+  color:var(--ink-1);
+  overflow-x:hidden;
+  cursor:none;
+  line-height:1.65;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+::selection{background:rgba(0,212,212,.35);color:#fff}
+
+/* ── CURSOR ───────────────────────────────────────────── */
+.cur{position:fixed;width:7px;height:7px;border-radius:50%;background:rgba(125,232,232,.8);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .2s,height .2s}
+.cur-r{position:fixed;width:28px;height:28px;border-radius:50%;border:1px solid rgba(125,232,232,.25);pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+
+/* ── NAV ──────────────────────────────────────────────── */
+nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s}
+nav.site-nav.solid{background:rgba(3,6,12,.92);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);padding:1rem 2.5rem;border-bottom:1px solid rgba(0,212,212,.08)}
+.nav-logo{font-family:var(--serif);font-size:1.25rem;color:#fff;text-decoration:none;font-weight:400;letter-spacing:.01em}
+.nav-logo em{color:var(--sky);font-style:italic;font-weight:500}
+.nav-r{display:flex;align-items:center;gap:.15rem}
+.nav-r a{color:rgba(240,248,252,.5);text-decoration:none;font-size:.78rem;padding:.42rem .95rem;border-radius:50px;transition:all .25s;font-weight:300;letter-spacing:.015em}
+.nav-r a:hover{color:#fff;background:rgba(0,212,212,.08)}
+.nav-r a.active{color:var(--sky);background:rgba(0,181,184,.09)}
+.nav-cta{background:rgba(0,181,184,.14)!important;color:var(--sky)!important;border:1px solid rgba(0,212,212,.25)!important}
+.nav-cta:hover{background:rgba(0,181,184,.24)!important;color:#fff!important}
+.lang{display:flex;background:rgba(255,255,255,.04);border-radius:50px;overflow:hidden;margin-left:.5rem;border:1px solid rgba(255,255,255,.04)}
+.lb{padding:.3rem .75rem;font-size:.68rem;color:rgba(255,255,255,.35);cursor:pointer;border:none;background:transparent;font-family:var(--sans);transition:all .2s;font-weight:400}
+.lb.on{background:rgba(0,181,184,.22);color:var(--sky);border-radius:50px}
+
+main{padding-top:0}
+.section-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.section-narrow{max-width:760px;margin:0 auto;position:relative;z-index:2}
+
+/* ── TYPOGRAPHY ──────────────────────────────────────── */
+.eyebrow{font-family:var(--sans);font-size:.68rem;font-weight:400;text-transform:uppercase;letter-spacing:.22em;color:var(--teal);margin-bottom:1.4rem;display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:24px;height:1px;background:linear-gradient(to right,transparent,var(--teal))}
+
+.sec-h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);color:#fff;font-weight:300;letter-spacing:-.01em;margin-bottom:1.5rem;line-height:1.1}
+.sec-h2 em{color:var(--sky);font-style:italic;font-weight:400}
+
+.body-text{font-family:var(--sans);font-size:.95rem;color:var(--ink-2);line-height:1.85;font-weight:300;margin-bottom:1.1rem}
+.body-text em{color:var(--sky);font-style:italic;font-family:var(--serif);font-size:1.08em}
+.body-text strong{color:var(--ink-1);font-weight:500}
+
+/* ── BUTTONS ─────────────────────────────────────────── */
+.cta-p{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 2.2rem;border-radius:50px;background:linear-gradient(135deg,var(--teal),var(--aqua));border:1px solid rgba(0,212,212,.6);color:#fff;text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;transition:all .3s cubic-bezier(.2,.8,.2,1);box-shadow:0 6px 24px rgba(0,181,184,.3),0 0 0 1px rgba(255,255,255,.1) inset;font-weight:500;font-family:var(--sans);cursor:pointer;position:relative;overflow:hidden}
+.cta-p:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,212,212,.45)}
+.cta-s{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 2.2rem;border-radius:50px;background:rgba(255,255,255,.04);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.88);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;transition:all .3s;font-weight:400;font-family:var(--sans)}
+.cta-s:hover{background:rgba(0,181,184,.1);border-color:rgba(0,212,212,.4);color:var(--sky);transform:translateY(-2px)}
+
+/* ── FOOTER ──────────────────────────────────────────── */
+footer.site-footer{background:rgba(1,3,6,.98);padding:3rem 2rem 2rem;border-top:1px solid rgba(0,181,184,.1);position:relative}
+footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%;height:1px;background:linear-gradient(to right,transparent,rgba(0,212,212,.3),transparent);transform:translateX(-50%)}
+.fi{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.fb .lf{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:.6rem;font-weight:400}
+.fb .lf em{color:var(--sky);font-style:italic;font-weight:500}
+.fb .fb-tag{font-family:var(--serif);font-style:italic;font-size:.85rem;color:var(--sky);margin-bottom:.8rem;font-weight:300}
+.fb p{font-size:.72rem;color:rgba(255,255,255,.32);line-height:1.75;font-weight:300;max-width:220px}
+.fc h4{font-family:var(--sans);font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem}
+.fc a{display:block;font-size:.78rem;color:rgba(255,255,255,.42);text-decoration:none;margin-bottom:.45rem;transition:color .2s;font-weight:300}
+.fc a:hover{color:var(--sky)}
+.fbot{border-top:1px solid rgba(255,255,255,.05);padding-top:1.3rem;max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;font-size:.7rem;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:.4rem;font-style:italic;font-family:var(--serif)}
+
+.wa{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.35);text-decoration:none;z-index:900;transition:all .3s}
+.wa:hover{transform:scale(1.08) rotate(-4deg);box-shadow:0 8px 28px rgba(37,211,102,.55)}
+.wa svg{width:25px;height:25px;fill:#fff}
+
+/* ── REVEAL ANIMATIONS ────────────────────────────────── */
+.rev{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.rev.vis{opacity:1;transform:translateY(0)}
+.rev-l{opacity:0;transform:translateX(-30px);transition:opacity 1s ease,transform 1s ease}
+.rev-l.vis{opacity:1;transform:translateX(0)}
+.rev-r{opacity:0;transform:translateX(30px);transition:opacity 1s ease,transform 1s ease}
+.rev-r.vis{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+
+/* ═══════════════════════════════════════════════════════
+   ABOUT PAGE — specific styles
+   ═══════════════════════════════════════════════════════ */
+
+/* ── HERO ─────────────────────────────────────────────── */
+.about-hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:8rem 2rem 5rem;
+  text-align:center;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%,    rgba(0,181,184,.20), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 15% 35%,   rgba(124,58,237,.09), transparent 60%),
+    radial-gradient(ellipse 85% 65% at 85% 60%,   rgba(0,212,212,.11),  transparent 65%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(255,145,45,.07), transparent 55%),
+    linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-void) 100%);
+}
+.about-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 18% 24%, rgba(255,255,255,.35) 0, transparent 2px),
+    radial-gradient(1px 1px at 62% 12%, rgba(125,232,232,.4) 0, transparent 2px),
+    radial-gradient(1px 1px at 88% 38%, rgba(255,255,255,.25) 0, transparent 2px),
+    radial-gradient(1px 1px at 38% 60%, rgba(125,232,232,.3) 0, transparent 2px),
+    radial-gradient(1px 1px at 72% 78%, rgba(255,255,255,.3) 0, transparent 2px),
+    radial-gradient(1px 1px at 14% 82%, rgba(125,232,232,.35) 0, transparent 2px),
+    radial-gradient(1px 1px at 48% 18%, rgba(255,255,255,.2) 0, transparent 2px),
+    radial-gradient(1px 1px at 28% 44%, rgba(125,232,232,.25) 0, transparent 2px);
+  background-size:600px 600px;
+  opacity:.75;
+  animation:twinkle 6s ease-in-out infinite alternate;
+}
+@keyframes twinkle{0%{opacity:.6}100%{opacity:.85}}
+.about-hero::after{
+  content:"";position:absolute;
+  left:-10%;right:-10%;top:25%;height:45%;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 100% at 30% 50%, rgba(0,212,212,.13), transparent 70%),
+    radial-gradient(ellipse 50% 100% at 70% 50%, rgba(125,232,232,.09), transparent 70%);
+  filter:blur(40px);
+}
+
+.hero-inner{position:relative;z-index:3;max-width:860px}
+.hero-eyebrow{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(1rem,1.6vw,1.2rem);
+  color:var(--sky);
+  margin-bottom:1.4rem;
+  letter-spacing:.02em;
+  font-weight:300;
+}
+.hero-title{
+  font-family:var(--serif);
+  font-size:clamp(2.4rem,6vw,5.2rem);
+  color:#fff;
+  font-weight:300;
+  line-height:1;
+  letter-spacing:-.02em;
+  margin-bottom:1.2rem;
+  text-shadow:0 2px 40px rgba(0,0,0,.4);
+}
+.hero-sub{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(1.3rem,2.6vw,1.9rem);
+  color:var(--sky);
+  font-weight:300;
+  line-height:1.3;
+  margin-bottom:2.4rem;
+  max-width:740px;
+  margin-left:auto;margin-right:auto;
+}
+.hero-body{
+  font-family:var(--sans);
+  font-size:clamp(.95rem,1.4vw,1.05rem);
+  color:var(--ink-2);
+  max-width:620px;
+  margin:0 auto 2.4rem;
+  line-height:1.8;
+  font-weight:300;
+  text-align:left;
+}
+.hero-body p{margin-bottom:.9rem}
+.hero-body p:last-child{margin-bottom:0;text-align:center}
+.hero-body em{color:var(--sky);font-style:italic}
+.hero-ctas{
+  display:flex;gap:.85rem;
+  justify-content:center;flex-wrap:wrap;
+}
+
+
+/* ── BELIEF SECTION — short, declarative ───────────────── */
+.belief{
+  padding:8rem 2rem 7rem;
+  background:
+    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(0,181,184,.07), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(26,58,92,.22), transparent 65%),
+    var(--navy-void);
+  position:relative;
+}
+.belief-inner{max-width:760px;margin:0 auto;position:relative;z-index:2}
+.belief-line{
+  font-family:var(--serif);
+  font-size:clamp(1.5rem,2.6vw,2rem);
+  color:var(--ink-1);
+  line-height:1.5;
+  font-weight:300;
+  margin-bottom:1.4rem;
+}
+.belief-line em{color:var(--sky);font-style:italic;font-weight:400}
+.belief-line:last-child{margin-bottom:0}
+
+
+/* ── WHAT WE MAKE — product line grid ─────────────────── */
+.what-section{
+  padding:6rem 2rem;
+  background:linear-gradient(180deg, var(--navy-void), var(--navy-deep));
+  position:relative;
+}
+.what-header{max-width:1100px;margin:0 auto 3rem;position:relative;z-index:2}
+.what-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.2rem;
+}
+.what-card{
+  background:linear-gradient(135deg, rgba(26,58,92,.25), rgba(10,22,40,.55));
+  border:1px solid rgba(0,212,212,.08);
+  border-radius:16px;
+  padding:1.8rem 1.6rem;
+  display:flex;
+  flex-direction:column;
+  gap:.85rem;
+  transition:all .3s;
+}
+.what-card:hover{
+  border-color:rgba(0,212,212,.22);
+  transform:translateY(-3px);
+  box-shadow:0 14px 40px rgba(0,0,0,.3);
+}
+.what-icon{width:36px;height:36px;opacity:.9;margin-bottom:.2rem}
+.what-icon svg{width:100%;height:100%;display:block}
+.what-card h3{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  font-weight:500;
+  color:#fff;
+  line-height:1.2;
+}
+.what-card h3 em{color:var(--sky);font-style:italic;font-weight:400;display:block;font-size:.88rem;margin-top:.2rem}
+.what-card p{
+  font-family:var(--sans);
+  font-size:.82rem;
+  color:var(--ink-3);
+  line-height:1.7;
+  font-weight:300;
+}
+
+
+/* ── HOW WE WORK — credibility layer ──────────────────── */
+.how-section{
+  padding:7rem 2rem;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 50%, rgba(0,181,184,.05), transparent 70%),
+    var(--navy-deep);
+  position:relative;
+}
+.how-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.how-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+  margin-top:3rem;
+}
+.how-item{
+  padding:1.8rem 0;
+  border-top:1px solid rgba(0,212,212,.12);
+}
+.how-item-num{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.2rem;
+  color:var(--teal);
+  margin-bottom:.6rem;
+  font-weight:400;
+}
+.how-item h4{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  font-weight:400;
+  color:#fff;
+  margin-bottom:.6rem;
+  line-height:1.3;
+}
+.how-item h4 em{color:var(--sky);font-style:italic}
+.how-item p{
+  font-family:var(--sans);
+  font-size:.85rem;
+  color:var(--ink-3);
+  line-height:1.8;
+  font-weight:300;
+}
+
+
+/* ── FOUNDER SECTION — photo + paragraph ──────────────── */
+.founder-section{
+  padding:7rem 2rem;
+  background:
+    radial-gradient(ellipse 60% 60% at 20% 40%, rgba(26,58,92,.22), transparent 65%),
+    radial-gradient(ellipse 50% 50% at 80% 60%, rgba(0,181,184,.08), transparent 70%),
+    var(--navy-void);
+  position:relative;
+}
+.founder-grid{
+  max-width:1000px;margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+  gap:4rem;
+  align-items:center;
+  position:relative;z-index:2;
+}
+.founder-photo-wrap{
+  position:relative;
+  aspect-ratio:1/1;
+  max-width:400px;
+}
+.founder-photo-wrap::before{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0,181,184,.25), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(125,232,232,.18), transparent 55%);
+  filter:blur(20px);
+  z-index:-1;
+}
+.founder-photo{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid rgba(0,212,212,.18);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.5),
+    0 0 0 1px rgba(255,255,255,.04) inset;
+  display:block;
+}
+.founder-copy{
+  padding-left:0;
+}
+.founder-name{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem,3.2vw,2.4rem);
+  color:#fff;
+  font-weight:300;
+  line-height:1.1;
+  margin-bottom:.4rem;
+  letter-spacing:-.005em;
+}
+.founder-name em{color:var(--sky);font-style:italic;font-weight:500}
+.founder-role{
+  font-family:var(--sans);
+  font-size:.72rem;
+  color:var(--teal);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:1.8rem;
+  font-weight:400;
+}
+.founder-para{
+  font-family:var(--sans);
+  font-size:.92rem;
+  color:var(--ink-2);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:1rem;
+}
+.founder-para em{color:var(--sky);font-style:italic;font-family:var(--serif);font-size:1.08em}
+.founder-quote{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.25rem;
+  color:var(--sky);
+  line-height:1.5;
+  font-weight:300;
+  padding-left:1.2rem;
+  border-left:2px solid rgba(0,181,184,.4);
+  margin-top:1.5rem;
+}
+
+
+/* ── PULL QUOTE — big Cormorant italic moment ─────────── */
+.pullquote-section{
+  padding:8rem 2rem;
+  text-align:center;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,181,184,.10), transparent 60%),
+    linear-gradient(180deg, var(--navy-void), var(--navy-deep));
+  position:relative;
+}
+.pullquote-section::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 15% 30%, rgba(125,232,232,.35) 0, transparent 2px),
+    radial-gradient(1px 1px at 80% 25%, rgba(255,255,255,.25) 0, transparent 2px),
+    radial-gradient(1px 1px at 30% 75%, rgba(125,232,232,.3) 0, transparent 2px),
+    radial-gradient(1px 1px at 88% 80%, rgba(125,232,232,.25) 0, transparent 2px);
+  background-size:500px 500px;
+  opacity:.5;
+}
+.pullquote{
+  max-width:780px;margin:0 auto;
+  position:relative;z-index:2;
+}
+.pullquote-body{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  color:#fff;
+  line-height:1.35;
+  font-weight:300;
+  letter-spacing:-.005em;
+}
+.pullquote-body em{color:var(--sky)}
+.pullquote-attribution{
+  margin-top:2rem;
+  font-family:var(--sans);
+  font-size:.7rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-4);
+  font-weight:400;
+  display:inline-flex;
+  align-items:center;
+  gap:.8rem;
+}
+.pullquote-attribution::before,.pullquote-attribution::after{
+  content:"";display:block;width:30px;height:1px;
+  background:rgba(0,212,212,.3);
+}
+
+
+/* ── LONG GAME — vision roadmap ───────────────────────── */
+.vision-section{
+  padding:7rem 2rem;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(124,58,237,.06), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 70%, rgba(0,181,184,.08), transparent 65%),
+    var(--navy-deep);
+  position:relative;
+}
+.vision-inner{max-width:1000px;margin:0 auto;position:relative;z-index:2}
+.vision-header{max-width:620px;margin-bottom:3rem}
+.vision-list{
+  display:flex;flex-direction:column;gap:1rem;
+}
+.vision-row{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:1.8rem;
+  align-items:baseline;
+  padding:1.6rem 0;
+  border-top:1px solid rgba(0,212,212,.1);
+}
+.vision-row:last-child{border-bottom:1px solid rgba(0,212,212,.1)}
+.vision-year{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.25rem;
+  color:var(--teal);
+  font-weight:400;
+  min-width:100px;
+}
+.vision-copy h5{
+  font-family:var(--serif);
+  font-size:1.2rem;
+  font-weight:400;
+  color:#fff;
+  margin-bottom:.4rem;
+  line-height:1.3;
+}
+.vision-copy h5 em{color:var(--sky);font-style:italic}
+.vision-copy p{
+  font-family:var(--sans);
+  font-size:.82rem;
+  color:var(--ink-3);
+  line-height:1.7;
+  font-weight:300;
+}
+
+
+/* ── CLOSING ──────────────────────────────────────────── */
+.closing-section{
+  padding:7rem 2rem 6rem;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 100%, rgba(0,181,184,.12), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 0%,   rgba(26,58,92,.25),    transparent 70%),
+    var(--navy-void);
+  text-align:center;
+  position:relative;
+}
+.closing-inner{max-width:640px;margin:0 auto;position:relative;z-index:2}
+.closing-line{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:clamp(1.8rem,3.5vw,2.6rem);
+  color:#fff;
+  font-weight:300;
+  line-height:1.4;
+  margin-bottom:.6rem;
+}
+.closing-line em{color:var(--sky);font-weight:400;font-style:italic}
+.closing-sub{
+  font-family:var(--sans);
+  font-size:.92rem;
+  color:var(--ink-3);
+  margin-bottom:2.2rem;
+  line-height:1.7;
+  font-weight:300;
+}
+.closing-ctas{
+  display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width:900px){
+  .fi{grid-template-columns:1fr 1fr;gap:2rem}
+  .founder-grid{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+  .founder-photo-wrap{max-width:280px;margin:0 auto}
+  .founder-quote{text-align:left;max-width:480px;margin-left:auto;margin-right:auto}
+  .about-hero{min-height:auto;padding:7rem 1.25rem 4rem}
+  .hero-body{text-align:center}
+  .hero-body p{text-align:center}
+}
+@media (max-width:768px){
+  body{cursor:auto}
+  .cur,.cur-r{display:none}
+  nav.site-nav,nav.site-nav.solid{padding:1rem 1.25rem}
+  .nav-r a:not(.nav-cta):not(.lang){display:none}
+  .nav-r .lang{display:flex}
+  .belief,.what-section,.how-section,.founder-section,.pullquote-section,.vision-section,.closing-section{padding:4.5rem 1.25rem}
+  .vision-row{grid-template-columns:1fr;gap:.5rem}
+  .vision-year{min-width:0}
+}
+@media (max-width:480px){
+  .fi{grid-template-columns:1fr}
+  .fbot{flex-direction:column;align-items:flex-start;gap:.3rem}
+}
+  </style>
+</head>
+<body>
+
+  <div class="cur" id="cur"></div>
+  <div class="cur-r" id="cr"></div>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Auravale<em>Academy</em></a>
+    <div class="nav-r">
+      <a href="products.html">Products</a>
+      <a href="about.html" class="active">About</a>
+      <a href="schools.html">Schools</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+      <div class="lang">
+        <button class="lb on" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lb"    data-lang="id" onclick="setLang('id')">ID</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════ HERO — the two-stab opener ═══════════ -->
+    <section class="about-hero">
+      <div class="hero-inner">
+        <div class="hero-eyebrow rev">About Auravale</div>
+        <h1 class="hero-title rev d1">English, where your child<br>actually lives.</h1>
+        <p class="hero-sub rev d2">
+          Not London streets. Warungs. Becak rides. The neighbour's kitchen.
+        </p>
+        <div class="hero-body rev d3">
+          <p>
+            Most English books sold in Indonesia were written for children somewhere else. Set in
+            parks and playgrounds your child has never seen. Full of examples that don't quite fit.
+          </p>
+          <p>
+            And then — priced as if Indonesian families were the ones who asked for them to be imported.
+          </p>
+          <p>
+            <em>We think both of those things are a problem worth fixing.</em>
+          </p>
+        </div>
+        <div class="hero-ctas rev d4">
+          <a href="products.html" class="cta-p">Explore our books</a>
+          <a href="contact.html" class="cta-s">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ BELIEF — the core of what we're about ═══════════ -->
+    <section class="belief">
+      <div class="belief-inner">
+        <div class="eyebrow rev">What we believe</div>
+        <p class="belief-line rev d1">
+          Language is <em>infrastructure.</em> A child who learns English has a wider world — more
+          stories, more teachers, more futures to reach for.
+        </p>
+        <p class="belief-line rev d2">
+          That opportunity should not depend on postcode, income, or proximity to a private school.
+          It should depend on whether a family decides they'd like to begin.
+        </p>
+        <p class="belief-line rev d3">
+          So we are building the books that make beginning <em>possible.</em>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ WHAT WE MAKE — product families, warmly listed ═══════════ -->
+    <section class="what-section">
+      <div class="what-header">
+        <div class="eyebrow rev">What we make</div>
+        <h2 class="sec-h2 rev d1">Tools for every stage of <em>becoming a reader.</em></h2>
+        <p class="body-text rev d2" style="max-width:620px">
+          Four product families, each designed for a different moment in a learner's life —
+          from a two-year-old's first alphabet to a university student's final exam.
+        </p>
+      </div>
+
+      <div class="what-grid">
+
+        <div class="what-card rev d1">
+          <span class="what-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 6 10 Q 11 8 16 10 Q 21 8 26 10 L 26 23 Q 21 21 16 23 Q 11 21 6 23 Z" stroke="#A8EEF0" stroke-width="1" opacity="0.55" fill="none"/>
+              <line x1="16" y1="10" x2="16" y2="23" stroke="#A8EEF0" stroke-width="0.7" opacity="0.4"/>
+              <circle cx="16" cy="8" r="1.3" fill="#A8EEF0" opacity="0.9"/>
+              <circle cx="16" cy="8" r="3" fill="#A8EEF0" opacity="0.2"/>
+            </svg>
+          </span>
+          <h3>Little Lights<em>ABC, phonics, and first readers</em></h3>
+          <p>81 books for children aged 2–12. Built from the ground up with the neuroscience of how
+          children actually learn to read — one sound, then one word, then one story at a time.</p>
+        </div>
+
+        <div class="what-card rev d2">
+          <span class="what-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round">
+              <line x1="9" y1="23" x2="22" y2="10" stroke="#A8EEF0" stroke-width="1.4" opacity="0.55"/>
+              <line x1="20" y1="8" x2="24" y2="12" stroke="#A8EEF0" stroke-width="1.4" opacity="0.55"/>
+              <circle cx="9" cy="23" r="1.3" fill="#A8EEF0" opacity="0.9"/>
+              <circle cx="9" cy="23" r="3" fill="#A8EEF0" opacity="0.2"/>
+              <circle cx="12" cy="20" r="0.4" fill="#A8EEF0" opacity="0.45"/>
+              <circle cx="15" cy="17" r="0.4" fill="#A8EEF0" opacity="0.45"/>
+              <circle cx="18" cy="14" r="0.4" fill="#A8EEF0" opacity="0.45"/>
+            </svg>
+          </span>
+          <h3>Flicker Home<em>Bilingual workbooks for parents and children</em></h3>
+          <p>60-page workbooks designed so a parent with no formal English training can sit with
+          their child and actually help. Bahasa and English on the same page, no guessing.</p>
+        </div>
+
+        <div class="what-card rev d3">
+          <span class="what-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="2.5" fill="#A8EEF0" opacity="0.95"/>
+              <circle cx="16" cy="16" r="5" fill="#A8EEF0" opacity="0.18"/>
+              <circle cx="16" cy="16" r="9" stroke="#A8EEF0" stroke-width="0.8" opacity="0.35" fill="none"/>
+              <circle cx="16" cy="16" r="13" stroke="#A8EEF0" stroke-width="0.5" opacity="0.2" fill="none"/>
+            </svg>
+          </span>
+          <h3>CRAMwise<em>TOEIC prep for university students</em></h3>
+          <p>Neuroscience-informed cram series in three volumes, built for the specific mistakes
+          Indonesian learners make — because we know, we teach them. CEFR B1 to B2.</p>
+        </div>
+
+        <div class="what-card rev d4">
+          <span class="what-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round">
+              <rect x="8" y="10" width="16" height="3" stroke="#A8EEF0" stroke-width="0.9" opacity="0.35" fill="none"/>
+              <rect x="8" y="14.5" width="16" height="3" stroke="#A8EEF0" stroke-width="0.9" opacity="0.55" fill="none"/>
+              <rect x="8" y="19" width="16" height="3" stroke="#A8EEF0" stroke-width="0.9" opacity="0.75" fill="none"/>
+              <circle cx="24" cy="22.5" r="1.3" fill="#A8EEF0" opacity="0.9"/>
+              <circle cx="24" cy="22.5" r="2.8" fill="#A8EEF0" opacity="0.2"/>
+            </svg>
+          </span>
+          <h3>Class Packs<em>Printable resources for teachers</em></h3>
+          <p>A4, print-ready, rural-school friendly. Word walls, worksheets, activity cards, CEFR-
+          referenced teaching notes. For the teachers doing the real work with the real constraints.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════ HOW WE WORK — credibility, quietly ═══════════ -->
+    <section class="how-section">
+      <div class="how-inner">
+        <div class="eyebrow rev">How we build them</div>
+        <h2 class="sec-h2 rev d1">Three things under <em>every page we print.</em></h2>
+
+        <div class="how-grid">
+
+          <div class="how-item rev d1">
+            <div class="how-item-num">01 &mdash;</div>
+            <h4>CEFR <em>alignment</em></h4>
+            <p>The Common European Framework of Reference is how the world measures language
+            learning. Every Auravale book is levelled against it — A1 through B2 — so families,
+            teachers, and schools know exactly where a learner stands and where they're going next.</p>
+          </div>
+
+          <div class="how-item rev d2">
+            <div class="how-item-num">02 &mdash;</div>
+            <h4>Neuroscience of <em>how learning sticks</em></h4>
+            <p>Spaced repetition. Retrieval practice. Interleaved difficulty. These aren't buzzwords
+            — they're the reason our CRAMwise students pass and our Little Lights readers remember.
+            We build the science into the structure of every book, so learners don't have to think about it.</p>
+          </div>
+
+          <div class="how-item rev d3">
+            <div class="how-item-num">03 &mdash;</div>
+            <h4>Kurikulum Merdeka <em>references</em></h4>
+            <p>Our teacher resources and school materials map directly to Indonesia's national
+            curriculum. No translation needed. No awkward fit. Just English learning designed to
+            sit naturally inside the schools it's being used in.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ FOUNDER — photo + warm paragraph ═══════════ -->
+    <section class="founder-section">
+      <div class="founder-grid">
+
+        <div class="founder-photo-wrap rev-l">
+          <!-- TODO: upload megan.jpg to the repo root (or /images/megan.jpg and update path) -->
+          <img class="founder-photo" src="megan.jpg" alt="Megan Griffith, founder of Auravale Academy" loading="lazy">
+        </div>
+
+        <div class="founder-copy rev-r d1">
+          <div class="eyebrow">Who makes this</div>
+          <h2 class="founder-name">Megan <em>&amp; team.</em></h2>
+          <div class="founder-role">Founded 2024 · Based in Indonesia</div>
+
+          <p class="founder-para">
+            Auravale was founded by <strong>Megan Griffith</strong> — an English educator with
+            eight years of international teaching experience and a previously published author
+            in Japan. The books are built in Indonesia, by a small team who teach and write for
+            the children they're actually making them for.
+          </p>
+
+          <p class="founder-para">
+            The international experience is where the rigor comes from: CEFR methodology,
+            neuroscience-backed structure, the editorial standards you'd find in an
+            imported edition. <em>The local care is where the relevance comes from:</em> the
+            warungs, the becak rides, the Indonesian parents and teachers whose feedback
+            shapes every draft.
+          </p>
+
+          <blockquote class="founder-quote">
+            "We're not trying to be Oxford with an Indonesian sticker on it. We're trying to
+            be what Oxford would be if it had started here."
+          </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════ PULL QUOTE — the brand line moment ═══════════ -->
+    <section class="pullquote-section">
+      <div class="pullquote">
+        <p class="pullquote-body rev">
+          Language is how a <em>small world</em><br>
+          becomes a <em>large one.</em>
+        </p>
+        <div class="pullquote-attribution rev d1">The belief behind everything we make</div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ LONG GAME — vision roadmap ═══════════ -->
+    <section class="vision-section">
+      <div class="vision-inner">
+        <div class="vision-header">
+          <div class="eyebrow rev">The long game</div>
+          <h2 class="sec-h2 rev d1">What we're <em>building toward.</em></h2>
+          <p class="body-text rev d2">
+            Auravale is a ten-year project, not a publishing sprint. These are the things
+            we're quietly building while the first books ship.
+          </p>
+        </div>
+
+        <div class="vision-list">
+
+          <div class="vision-row rev d1">
+            <div class="vision-year">Next —</div>
+            <div class="vision-copy">
+              <h5>Teen readers and <em>IELTS prep</em></h5>
+              <p>Middle-years bridge readers for ages 12–16, and an IELTS series aimed at
+              students heading to universities abroad. Same pedagogy, different pressure.</p>
+            </div>
+          </div>
+
+          <div class="vision-row rev d2">
+            <div class="vision-year">Soon —</div>
+            <div class="vision-copy">
+              <h5>The Auravale app <em>— coin-based reading, offline-first</em></h5>
+              <p>A reading app designed for Indonesian connectivity realities: fully functional
+              offline, bilingual UI, and a coin-reward system that feels like a game rather than
+              homework. Built for the child who gets 30 minutes on a shared phone.</p>
+            </div>
+          </div>
+
+          <div class="vision-row rev d3">
+            <div class="vision-year">Then —</div>
+            <div class="vision-copy">
+              <h5>FirstLight <em>— 48 books per level, every level</em></h5>
+              <p>A full graded reader series — 48 books per level — built from the ground up
+              for Southeast Asian children. The long-term vision for what a national-scale
+              reading programme can look like, without the import markup.</p>
+            </div>
+          </div>
+
+          <div class="vision-row rev d4">
+            <div class="vision-year">Eventually —</div>
+            <div class="vision-copy">
+              <h5>Beyond Indonesia <em>— across Southeast Asia</em></h5>
+              <p>The Philippines. Vietnam. Cambodia. Myanmar. Bangladesh. Every country where
+              English is infrastructure and the current market isn't meeting the families who
+              need it most. One country at a time, the right way.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════ CLOSING — invite in ═══════════ -->
+    <section class="closing-section">
+      <div class="closing-inner">
+        <p class="closing-line rev">
+          This is what we're making.<br>
+          <em>Come see if it's for you.</em>
+        </p>
+        <p class="closing-sub rev d1">
+          If you're a parent, a teacher, or a school leader — there's something here
+          for you. Have a look through the books, or just say hello.
+        </p>
+        <div class="closing-ctas rev d2">
+          <a href="products.html" class="cta-p">Explore the books</a>
+          <a href="contact.html" class="cta-s">Say hello</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Shared footer -->
+  <footer class="site-footer">
+    <div class="fi">
+      <div class="fb">
+        <div class="lf">Auravale<em>Academy</em></div>
+        <div class="fb-tag">Build tools. Spark change.</div>
+        <p>English education, made affordable, engaging, and honest. Starting in Indonesia. Lighting up the darkest corners.</p>
+      </div>
+      <div class="fc">
+        <h4>Products</h4>
+        <a href="products.html">All products</a>
+        <a href="products.html#young-learners">Young learners</a>
+        <a href="products.html#exam-prep">Exam prep</a>
+        <a href="products.html#teachers">Teacher packs</a>
+      </div>
+      <div class="fc">
+        <h4>Company</h4>
+        <a href="about.html">About us</a>
+        <a href="mission.html">Our mission</a>
+        <a href="schools.html">For schools</a>
+        <a href="wholesale.html">Wholesale</a>
+      </div>
+      <div class="fc">
+        <h4>Connect</h4>
+        <a href="contact.html">Contact</a>
+        <a href="free-resources.html">Free resources</a>
+        <a href="https://instagram.com/auravaleacademy" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/6281214295431" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Auravale Academy · auravaledistributions@gmail.com</span>
+      <span>Indonesia · Southeast Asia</span>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/6281214295431" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+
+  <!-- Shared behaviour: cursor, nav scroll state, reveal observer, lang toggle -->
+  <script>
+    (function(){
+      'use strict';
+
+      // Custom cursor
+      const curEl = document.getElementById('cur');
+      const crEl  = document.getElementById('cr');
+      if (curEl && crEl && window.matchMedia('(hover:hover)').matches){
+        let crx=0, cry=0, cmx=innerWidth/2, cmy=innerHeight/2;
+        document.addEventListener('mousemove', e => {
+          cmx = e.clientX; cmy = e.clientY;
+          curEl.style.left = cmx+'px'; curEl.style.top = cmy+'px';
+        });
+        (function loop(){
+          crx += (cmx-crx)*0.1; cry += (cmy-cry)*0.1;
+          crEl.style.left=crx+'px'; crEl.style.top=cry+'px';
+          requestAnimationFrame(loop);
+        })();
+        document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
+          el.addEventListener('mouseenter',()=>{ curEl.style.width='13px'; curEl.style.height='13px'; });
+          el.addEventListener('mouseleave',()=>{ curEl.style.width='7px'; curEl.style.height='7px'; });
+        });
+      }
+
+      // Nav scroll state
+      const nav = document.querySelector('nav.site-nav');
+      if (nav){
+        const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+        onScroll();
+        addEventListener('scroll', onScroll, { passive: true });
+      }
+
+      // Reveals
+      if ('IntersectionObserver' in window){
+        const obs = new IntersectionObserver(es => {
+          es.forEach(i => {
+            if (i.isIntersecting){ i.target.classList.add('vis'); obs.unobserve(i.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.rev, .rev-l, .rev-r').forEach(el => obs.observe(el));
+      } else {
+        document.querySelectorAll('.rev, .rev-l, .rev-r').forEach(el => el.classList.add('vis'));
+      }
+
+      // Language toggle (placeholder — real i18n comes with the BI pass at end of build)
+      window.setLang = function(lang){
+        document.querySelectorAll('.lb').forEach(b => b.classList.remove('on'));
+        const target = document.querySelector('.lb[data-lang="'+lang+'"]');
+        if (target) target.classList.add('on');
+        try { localStorage.setItem('auravale_lang', lang); } catch(e){}
+      };
+      try { const s = localStorage.getItem('auravale_lang'); if (s) window.setLang(s); } catch(e){}
+    })();
+  </script>
+
+</body>
+</html>
