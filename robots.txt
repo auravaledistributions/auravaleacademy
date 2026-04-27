@@ -1,0 +1,8 @@
+# Auravale Academy - robots.txt
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://auravaleacademy.com/sitemap.xml
