@@ -3,50 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ── PRIMARY SEO ─────────────────────────────────────── -->
-  <title>About | Auravale Academy</title>
+  <title>About · Auravale Academy</title>
   <meta name="description" content="English books made for Indonesian children. Same rigor as imported editions, built for the world they actually live in, priced for the families who'll actually read them.">
-  <meta name="keywords" content="about Auravale Academy, Indonesian English publisher, locally made English books, CEFR education Indonesia, Megan Griffith founder">
-  <meta name="author" content="Auravale Academy">
-  <link rel="canonical" href="https://auravaleacademy.com/about.html">
 
-  <!-- ── OPEN GRAPH (Facebook, WhatsApp, LinkedIn previews) ──── -->
-  <meta property="og:title" content="About | Auravale Academy">
+  <meta property="og:title" content="About · Auravale Academy">
   <meta property="og:description" content="English books made for Indonesian children. Same rigor as imported editions, priced for the families who'll read them.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://auravaleacademy.com/about.html">
   <meta property="og:site_name" content="Auravale Academy">
-  <meta property="og:image" content="https://auravaleacademy.com/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-
-  <!-- ── TWITTER / X CARDS ───────────────────────────────── -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About | Auravale Academy">
-  <meta name="twitter:description" content="English books made for Indonesian children. Built locally, priced fairly.">
-  <meta name="twitter:image" content="https://auravaleacademy.com/og-image.jpg">
-
-  <!-- ── FAVICON / TOUCH ICONS ──────────────────────────── -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-  <!-- ── STRUCTURED DATA ──────────────────────────────────── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About Auravale Academy",
-    "description": "English books made for Indonesian children, with the same rigor as imported editions and prices fair to local families.",
-    "url": "https://auravaleacademy.com/about.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Auravale Academy",
-      "url": "https://auravaleacademy.com"
-    }
-  }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,59 +18,18 @@
 
   <style>
 /* ═══════════════════════════════════════════════════════════════════
-   AURAVALE ACADEMY — about.html
+   AURAVALE ACADEMY · about.html
    Design system inherited from contact.html / index.html
    "Build tools. Spark change."
    ═══════════════════════════════════════════════════════════════════ */
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --teal:        #00B5B8;
-  --aqua:        #00D4D4;
-  --sky:         #7DE8E8;
-  --mist:        #E8F9F9;
-  --navy-void:   #03060c;
-  --navy-deep:   #050912;
-  --navy-mid:    #0a1628;
-  --navy-brand:  #1A3A5C;
-  --serif:       "Cormorant Garamond", Georgia, serif;
-  --sans:        "DM Sans", -apple-system, system-ui, sans-serif;
-  --ink-1:       #f0f8fc;
-  --ink-2:       rgba(240,248,252,.75);
-  --ink-3:       rgba(240,248,252,.48);
-  --ink-4:       rgba(240,248,252,.28);
-}
+
 html{background:var(--navy-void)}
-body{
-  font-family:var(--sans);
-  background:var(--navy-void);
-  color:var(--ink-1);
-  overflow-x:hidden;
-  cursor:none;
-  line-height:1.65;
-  font-weight:300;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-::selection{background:rgba(0,212,212,.35);color:#fff}
 
 /* ── CURSOR ───────────────────────────────────────────── */
-.cur{position:fixed;width:7px;height:7px;border-radius:50%;background:rgba(125,232,232,.8);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .2s,height .2s}
-.cur-r{position:fixed;width:28px;height:28px;border-radius:50%;border:1px solid rgba(125,232,232,.25);pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
 
 /* ── NAV ──────────────────────────────────────────────── */
-nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s}
-nav.site-nav.solid{background:rgba(3,6,12,.92);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);padding:1rem 2.5rem;border-bottom:1px solid rgba(0,212,212,.08)}
-.nav-logo{font-family:var(--serif);font-size:1.25rem;color:#fff;text-decoration:none;font-weight:400;letter-spacing:.01em}
-.nav-logo em{color:var(--sky);font-style:italic;font-weight:500}
-.nav-r{display:flex;align-items:center;gap:.15rem}
-.nav-r a{color:rgba(240,248,252,.5);text-decoration:none;font-size:.78rem;padding:.42rem .95rem;border-radius:50px;transition:all .25s;font-weight:300;letter-spacing:.015em}
-.nav-r a:hover{color:#fff;background:rgba(0,212,212,.08)}
-.nav-r a.active{color:var(--sky);background:rgba(0,181,184,.09)}
-.nav-cta{background:rgba(0,181,184,.14)!important;color:var(--sky)!important;border:1px solid rgba(0,212,212,.25)!important}
+
 .nav-cta:hover{background:rgba(0,181,184,.24)!important;color:#fff!important}
-.lang{display:flex;background:rgba(255,255,255,.04);border-radius:50px;overflow:hidden;margin-left:.5rem;border:1px solid rgba(255,255,255,.04)}
-.lb{padding:.3rem .75rem;font-size:.68rem;color:rgba(255,255,255,.35);cursor:pointer;border:none;background:transparent;font-family:var(--sans);transition:all .2s;font-weight:400}
-.lb.on{background:rgba(0,181,184,.22);color:var(--sky);border-radius:50px}
 
 main{padding-top:0}
 .section-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
@@ -130,21 +53,8 @@ main{padding-top:0}
 .cta-s:hover{background:rgba(0,181,184,.1);border-color:rgba(0,212,212,.4);color:var(--sky);transform:translateY(-2px)}
 
 /* ── FOOTER ──────────────────────────────────────────── */
-footer.site-footer{background:rgba(1,3,6,.98);padding:3rem 2rem 2rem;border-top:1px solid rgba(0,181,184,.1);position:relative}
-footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%;height:1px;background:linear-gradient(to right,transparent,rgba(0,212,212,.3),transparent);transform:translateX(-50%)}
-.fi{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
-.fb .lf{font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:.6rem;font-weight:400}
-.fb .lf em{color:var(--sky);font-style:italic;font-weight:500}
-.fb .fb-tag{font-family:var(--serif);font-style:italic;font-size:.85rem;color:var(--sky);margin-bottom:.8rem;font-weight:300}
-.fb p{font-size:.72rem;color:rgba(255,255,255,.32);line-height:1.75;font-weight:300;max-width:220px}
-.fc h4{font-family:var(--sans);font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--teal);margin-bottom:1rem}
-.fc a{display:block;font-size:.78rem;color:rgba(255,255,255,.42);text-decoration:none;margin-bottom:.45rem;transition:color .2s;font-weight:300}
-.fc a:hover{color:var(--sky)}
-.fbot{border-top:1px solid rgba(255,255,255,.05);padding-top:1.3rem;max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;font-size:.7rem;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:.4rem;font-style:italic;font-family:var(--serif)}
 
-.wa{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.35);text-decoration:none;z-index:900;transition:all .3s}
-.wa:hover{transform:scale(1.08) rotate(-4deg);box-shadow:0 8px 28px rgba(37,211,102,.55)}
-.wa svg{width:25px;height:25px;fill:#fff}
+.fb 
 
 /* ── REVEAL ANIMATIONS ────────────────────────────────── */
 .rev{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
@@ -155,9 +65,8 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
 .rev-r.vis{opacity:1;transform:translateX(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-
 /* ═══════════════════════════════════════════════════════
-   ABOUT PAGE — specific styles
+   ABOUT PAGE: specific styles
    ═══════════════════════════════════════════════════════ */
 
 /* ── HERO ─────────────────────────────────────────────── */
@@ -232,16 +141,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   max-width:740px;
   margin-left:auto;margin-right:auto;
 }
-.hero-body{
-  font-family:var(--sans);
-  font-size:clamp(.95rem,1.4vw,1.05rem);
-  color:var(--ink-2);
-  max-width:620px;
-  margin:0 auto 2.4rem;
-  line-height:1.8;
-  font-weight:300;
-  text-align:left;
-}
+.hero-
 .hero-body p{margin-bottom:.9rem}
 .hero-body p:last-child{margin-bottom:0;text-align:center}
 .hero-body em{color:var(--sky);font-style:italic}
@@ -250,8 +150,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   justify-content:center;flex-wrap:wrap;
 }
 
-
-/* ── BELIEF SECTION — short, declarative ───────────────── */
+/* ── BELIEF SECTION: short, declarative ───────────────── */
 .belief{
   padding:8rem 2rem 7rem;
   background:
@@ -272,8 +171,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
 .belief-line em{color:var(--sky);font-style:italic;font-weight:400}
 .belief-line:last-child{margin-bottom:0}
 
-
-/* ── WHAT WE MAKE — product line grid ─────────────────── */
+/* ── WHAT WE MAKE: product line grid ─────────────────── */
 .what-section{
   padding:6rem 2rem;
   background:linear-gradient(180deg, var(--navy-void), var(--navy-deep));
@@ -319,8 +217,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   font-weight:300;
 }
 
-
-/* ── HOW WE WORK — credibility layer ──────────────────── */
+/* ── HOW WE WORK: credibility layer ──────────────────── */
 .how-section{
   padding:7rem 2rem;
   background:
@@ -364,8 +261,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   font-weight:300;
 }
 
-
-/* ── FOUNDER SECTION — photo + paragraph ──────────────── */
+/* ── FOUNDER SECTION: photo + paragraph ──────────────── */
 .founder-section{
   padding:7rem 2rem;
   background:
@@ -452,8 +348,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   margin-top:1.5rem;
 }
 
-
-/* ── PULL QUOTE — big Cormorant italic moment ─────────── */
+/* ── PULL QUOTE: big Cormorant italic moment ─────────── */
 .pullquote-section{
   padding:8rem 2rem;
   text-align:center;
@@ -503,8 +398,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   background:rgba(0,212,212,.3);
 }
 
-
-/* ── LONG GAME — vision roadmap ───────────────────────── */
+/* ── LONG GAME: vision roadmap ───────────────────────── */
 .vision-section{
   padding:7rem 2rem;
   background:
@@ -552,7 +446,6 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   font-weight:300;
 }
 
-
 /* ── CLOSING ──────────────────────────────────────────── */
 .closing-section{
   padding:7rem 2rem 6rem;
@@ -586,10 +479,9 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;
 }
 
-
 /* ── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width:900px){
-  .fi{grid-template-columns:1fr 1fr;gap:2rem}
+  
   .founder-grid{grid-template-columns:1fr;gap:2.5rem;text-align:center}
   .founder-photo-wrap{max-width:280px;margin:0 auto}
   .founder-quote{text-align:left;max-width:480px;margin-left:auto;margin-right:auto}
@@ -599,43 +491,29 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
 }
 @media (max-width:768px){
   body{cursor:auto}
-  .cur,.cur-r{display:none}
-  nav.site-nav,nav.site-nav.solid{padding:1rem 1.25rem}
+  .cur,
+  nav.site-nav,
   .nav-r a:not(.nav-cta):not(.lang){display:none}
-  .nav-r .lang{display:flex}
+  .nav-r 
   .belief,.what-section,.how-section,.founder-section,.pullquote-section,.vision-section,.closing-section{padding:4.5rem 1.25rem}
   .vision-row{grid-template-columns:1fr;gap:.5rem}
   .vision-year{min-width:0}
 }
 @media (max-width:480px){
-  .fi{grid-template-columns:1fr}
-  .fbot{flex-direction:column;align-items:flex-start;gap:.3rem}
+
 }
   </style>
+  <link rel="stylesheet" href="css/shared.css">
 </head>
-<body>
+<body data-page="about" data-pathdepth="0" data-lang="en">
 
-  <div class="cur" id="cur"></div>
-  <div class="cur-r" id="cr"></div>
+  <div id="cursor-mount"></div>
 
-  <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Auravale<em>Academy</em></a>
-    <div class="nav-r">
-      <a href="products.html">Products</a>
-      <a href="about.html" class="active">About</a>
-      <a href="schools.html">Schools</a>
-      <a href="programs.html">Programs</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-      <div class="lang">
-        <button class="lb on" data-lang="en" onclick="setLang('en')">EN</button>
-        <button class="lb"    data-lang="id" onclick="setLang('id')">ID</button>
-      </div>
-    </div>
-  </nav>
+  <div id="nav-mount"></div>
 
   <main>
 
-    <!-- ═══════════ HERO — the two-stab opener ═══════════ -->
+    <!-- ═══════════ HERO: the two-stab opener ═══════════ -->
     <section class="about-hero">
       <div class="hero-inner">
         <div class="hero-eyebrow rev">About Auravale</div>
@@ -649,7 +527,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
             parks and playgrounds your child has never seen. Full of examples that don't quite fit.
           </p>
           <p>
-            And then — priced as if Indonesian families were the ones who asked for them to be imported.
+            And then, priced as if Indonesian families were the ones who asked for them to be imported.
           </p>
           <p>
             <em>We think both of those things are a problem worth fixing.</em>
@@ -662,13 +540,12 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ BELIEF — the core of what we're about ═══════════ -->
+    <!-- ═══════════ BELIEF: the core of what we're about ═══════════ -->
     <section class="belief">
       <div class="belief-inner">
         <div class="eyebrow rev">What we believe</div>
         <p class="belief-line rev d1">
-          Language is <em>infrastructure.</em> A child who learns English has a wider world — more
+          Language is <em>infrastructure.</em> A child who learns English has a wider world, more
           stories, more teachers, more futures to reach for.
         </p>
         <p class="belief-line rev d2">
@@ -681,14 +558,13 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ WHAT WE MAKE — product families, warmly listed ═══════════ -->
+    <!-- ═══════════ WHAT WE MAKE: product families, warmly listed ═══════════ -->
     <section class="what-section">
       <div class="what-header">
         <div class="eyebrow rev">What we make</div>
         <h2 class="sec-h2 rev d1">Tools for every stage of <em>becoming a reader.</em></h2>
         <p class="body-text rev d2" style="max-width:620px">
-          Four product families, each designed for a different moment in a learner's life —
+          Four product families, each designed for a different moment in a learner's life,
           from a two-year-old's first alphabet to a university student's final exam.
         </p>
       </div>
@@ -706,7 +582,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           </span>
           <h3>Little Lights<em>ABC, phonics, and first readers</em></h3>
           <p>81 books for children aged 2–12. Built from the ground up with the neuroscience of how
-          children actually learn to read — one sound, then one word, then one story at a time.</p>
+          children actually learn to read, one sound, then one word, then one story at a time.</p>
         </div>
 
         <div class="what-card rev d2">
@@ -737,7 +613,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           </span>
           <h3>CRAMwise<em>TOEIC prep for university students</em></h3>
           <p>Neuroscience-informed cram series in three volumes, built for the specific mistakes
-          Indonesian learners make — because we know, we teach them. CEFR B1 to B2.</p>
+          Indonesian learners make, because we know, we teach them. CEFR B1 to B2.</p>
         </div>
 
         <div class="what-card rev d4">
@@ -758,8 +634,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ HOW WE WORK — credibility, quietly ═══════════ -->
+    <!-- ═══════════ HOW WE WORK: credibility, quietly ═══════════ -->
     <section class="how-section">
       <div class="how-inner">
         <div class="eyebrow rev">How we build them</div>
@@ -771,7 +646,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
             <div class="how-item-num">01 &mdash;</div>
             <h4>CEFR <em>alignment</em></h4>
             <p>The Common European Framework of Reference is how the world measures language
-            learning. Every Auravale book is levelled against it — A1 through B2 — so families,
+            learning. Every Auravale book is levelled against it, A1 through B2, so families,
             teachers, and schools know exactly where a learner stands and where they're going next.</p>
           </div>
 
@@ -779,7 +654,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
             <div class="how-item-num">02 &mdash;</div>
             <h4>Neuroscience of <em>how learning sticks</em></h4>
             <p>Spaced repetition. Retrieval practice. Interleaved difficulty. These aren't buzzwords
-            — they're the reason our CRAMwise students pass and our Little Lights readers remember.
+            They're the reason our CRAMwise students pass and our Little Lights readers remember.
             We build the science into the structure of every book, so learners don't have to think about it.</p>
           </div>
 
@@ -795,8 +670,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ FOUNDER — photo + warm paragraph ═══════════ -->
+    <!-- ═══════════ FOUNDER: photo + warm paragraph ═══════════ -->
     <section class="founder-section">
       <div class="founder-grid">
 
@@ -811,7 +685,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           <div class="founder-role">Founded 2024 · Based in Indonesia</div>
 
           <p class="founder-para">
-            Auravale was founded by <strong>Megan Griffith</strong> — an English educator with
+            Auravale was founded by <strong>Megan Griffith</strong>, an English educator with
             eight years of international teaching experience and a previously published author
             in Japan. The books are built in Indonesia, by a small team who teach and write for
             the children they're actually making them for.
@@ -834,8 +708,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ PULL QUOTE — the brand line moment ═══════════ -->
+    <!-- ═══════════ PULL QUOTE: the brand line moment ═══════════ -->
     <section class="pullquote-section">
       <div class="pullquote">
         <p class="pullquote-body rev">
@@ -846,8 +719,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ LONG GAME — vision roadmap ═══════════ -->
+    <!-- ═══════════ LONG GAME: vision roadmap ═══════════ -->
     <section class="vision-section">
       <div class="vision-inner">
         <div class="vision-header">
@@ -862,7 +734,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
         <div class="vision-list">
 
           <div class="vision-row rev d1">
-            <div class="vision-year">Next —</div>
+            <div class="vision-year">Next</div>
             <div class="vision-copy">
               <h5>Teen readers and <em>IELTS prep</em></h5>
               <p>Middle-years bridge readers for ages 12–16, and an IELTS series aimed at
@@ -871,9 +743,9 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           </div>
 
           <div class="vision-row rev d2">
-            <div class="vision-year">Soon —</div>
+            <div class="vision-year">Soon</div>
             <div class="vision-copy">
-              <h5>The Auravale app <em>— coin-based reading, offline-first</em></h5>
+              <h5>The Auravale app, <em>coin-based reading, offline-first</em></h5>
               <p>A reading app designed for Indonesian connectivity realities: fully functional
               offline, bilingual UI, and a coin-reward system that feels like a game rather than
               homework. Built for the child who gets 30 minutes on a shared phone.</p>
@@ -881,19 +753,19 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           </div>
 
           <div class="vision-row rev d3">
-            <div class="vision-year">Then —</div>
+            <div class="vision-year">Then</div>
             <div class="vision-copy">
-              <h5>FirstLight <em>— 48 books per level, every level</em></h5>
-              <p>A full graded reader series — 48 books per level — built from the ground up
+              <h5>FirstLight, <em>48 books per level, every level</em></h5>
+              <p>A full graded reader series, 48 books per level, built from the ground up
               for Southeast Asian children. The long-term vision for what a national-scale
               reading programme can look like, without the import markup.</p>
             </div>
           </div>
 
           <div class="vision-row rev d4">
-            <div class="vision-year">Eventually —</div>
+            <div class="vision-year">Eventually</div>
             <div class="vision-copy">
-              <h5>Beyond Indonesia <em>— across Southeast Asia</em></h5>
+              <h5>Beyond Indonesia, <em>across Southeast Asia</em></h5>
               <p>The Philippines. Vietnam. Cambodia. Myanmar. Bangladesh. Every country where
               English is infrastructure and the current market isn't meeting the families who
               need it most. One country at a time, the right way.</p>
@@ -904,8 +776,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
       </div>
     </section>
 
-
-    <!-- ═══════════ CLOSING — invite in ═══════════ -->
+    <!-- ═══════════ CLOSING: invite in ═══════════ -->
     <section class="closing-section">
       <div class="closing-inner">
         <p class="closing-line rev">
@@ -913,7 +784,7 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
           <em>Come see if it's for you.</em>
         </p>
         <p class="closing-sub rev d1">
-          If you're a parent, a teacher, or a school leader — there's something here
+          If you're a parent, a teacher, or a school leader, there's something here
           for you. Have a look through the books, or just say hello.
         </p>
         <div class="closing-ctas rev d2">
@@ -925,79 +796,17 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
 
   </main>
 
-
   <!-- Shared footer -->
-  <footer class="site-footer">
-    <div class="fi">
-      <div class="fb">
-        <div class="lf">Auravale<em>Academy</em></div>
-        <div class="fb-tag">Build tools. Spark change.</div>
-        <p>English education, made affordable, engaging, and honest. Starting in Indonesia. Lighting up the darkest corners.</p>
-      </div>
-      <div class="fc">
-        <h4>Products</h4>
-        <a href="products.html">All products</a>
-        <a href="products.html#young-learners">Young learners</a>
-        <a href="products.html#exam-prep">Exam prep</a>
-        <a href="products.html#teachers">Teacher packs</a>
-      </div>
-      <div class="fc">
-        <h4>Company</h4>
-        <a href="about.html">About us</a>
-        <a href="mission.html">Our mission</a>
-        <a href="schools.html">For schools</a>
-        <a href="programs.html">Programs &amp; Partnerships</a>
-      </div>
-      <div class="fc">
-        <h4>Connect</h4>
-        <a href="contact.html">Contact</a>
-        <a href="free-resources.html">Free resources</a>
-        <a href="https://instagram.com/auravaleacademy" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/6281214295431" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-    <div class="fbot">
-      <span>© 2026 Auravale Academy · auravaledistributions@gmail.com</span>
-      <span>Indonesia · Southeast Asia</span>
-    </div>
-  </footer>
+  <div id="footer-mount"></div>
 
-  <a class="wa" href="https://wa.me/6281214295431" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
+  <div id="wa-mount"></div>
 
   <!-- Shared behaviour: cursor, nav scroll state, reveal observer, lang toggle -->
   <script>
     (function(){
-      'use strict';
-
-      // Custom cursor
-      const curEl = document.getElementById('cur');
-      const crEl  = document.getElementById('cr');
-      if (curEl && crEl && window.matchMedia('(hover:hover)').matches){
-        let crx=0, cry=0, cmx=innerWidth/2, cmy=innerHeight/2;
-        document.addEventListener('mousemove', e => {
-          cmx = e.clientX; cmy = e.clientY;
-          curEl.style.left = cmx+'px'; curEl.style.top = cmy+'px';
-        });
-        (function loop(){
-          crx += (cmx-crx)*0.1; cry += (cmy-cry)*0.1;
-          crEl.style.left=crx+'px'; crEl.style.top=cry+'px';
-          requestAnimationFrame(loop);
-        })();
-        document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
-          el.addEventListener('mouseenter',()=>{ curEl.style.width='13px'; curEl.style.height='13px'; });
-          el.addEventListener('mouseleave',()=>{ curEl.style.width='7px'; curEl.style.height='7px'; });
-        });
+      'use strict';);
       }
 
-      // Nav scroll state
-      const nav = document.querySelector('nav.site-nav');
-      if (nav){
-        const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
-        onScroll();
-        addEventListener('scroll', onScroll, { passive: true });
       }
 
       // Reveals
@@ -1012,16 +821,9 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
         document.querySelectorAll('.rev, .rev-l, .rev-r').forEach(el => el.classList.add('vis'));
       }
 
-      // Language toggle (placeholder — real i18n comes with the BI pass at end of build)
-      window.setLang = function(lang){
-        document.querySelectorAll('.lb').forEach(b => b.classList.remove('on'));
-        const target = document.querySelector('.lb[data-lang="'+lang+'"]');
-        if (target) target.classList.add('on');
-        try { localStorage.setItem('auravale_lang', lang); } catch(e){}
-      };
-      try { const s = localStorage.getItem('auravale_lang'); if (s) window.setLang(s); } catch(e){}
     })();
   </script>
 
+  <script src="js/shared.js"></script>
 </body>
 </html>
