@@ -22,53 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --teal:#00B5B8;
-  --aqua:#00D4D4;
-  --sky:#7DE8E8;
-  --mist:#E8F9F9;
-  --navy-void:#03060c;
-  --navy-deep:#050912;
-  --navy-mid:#0a1628;
-  --navy-brand:#1A3A5C;
-  --serif:"Cormorant Garamond", Georgia, serif;
-  --sans:"DM Sans", -apple-system, system-ui, sans-serif;
-  --ink-1:#f0f8fc;
-  --ink-2:rgba(240,248,252,.75);
-  --ink-3:rgba(240,248,252,.48);
-  --ink-4:rgba(240,248,252,.28);
-}
-html{background:var(--navy-void);scroll-behavior:smooth}
-body{
-  font-family:var(--sans);
-  background:var(--navy-void);
-  color:var(--ink-1);
-  overflow-x:hidden;
-  cursor:none;
-  line-height:1.65;
-  font-weight:300;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-::selection{background:rgba(0,212,212,.35);color:#fff}
-
-.cur{position:fixed;width:7px;height:7px;border-radius:50%;background:rgba(125,232,232,.8);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .2s,height .2s}
-.cur-r{position:fixed;width:28px;height:28px;border-radius:50%;border:1px solid rgba(125,232,232,.25);pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
-
-nav.site-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .5s}
-nav.site-nav.solid{background:rgba(3,6,12,.94);backdrop-filter:blur(20px);padding:1rem 2.5rem;border-bottom:1px solid rgba(255,255,255,.04)}
-.nav-logo{font-family:var(--serif);font-size:1.2rem;color:#fff;text-decoration:none;font-weight:300;letter-spacing:.04em}
-.nav-logo em{color:var(--sky);font-style:italic}
-.nav-r{display:flex;align-items:center;gap:.15rem}
-.nav-r a{color:rgba(240,248,252,.5);text-decoration:none;font-size:.78rem;padding:.42rem .95rem;border-radius:50px;transition:all .25s;font-weight:300;letter-spacing:.015em}
-.nav-r a:hover{color:#fff;background:rgba(0,212,212,.08)}
-.nav-r a.active{color:var(--sky);background:rgba(0,181,184,.09)}
-.nav-cta{background:rgba(0,181,184,.12)!important;color:var(--sky)!important;border:1px solid rgba(0,181,184,.22)!important}
-.lang{display:flex;background:rgba(255,255,255,.04);border-radius:50px;overflow:hidden;margin-left:.5rem;border:1px solid rgba(255,255,255,.04)}
-.lb{padding:.32rem .8rem;font-size:.68rem;color:rgba(255,255,255,.32);cursor:none;border:none;background:transparent;font-family:var(--sans);transition:all .2s;text-decoration:none;display:inline-block}
-.lb.on{background:rgba(0,181,184,.2);color:var(--sky);border-radius:50px}
-.lb:hover{color:rgba(255,255,255,.7)}
 
 .article-hero{
   padding:9rem 2rem 4rem;
@@ -431,12 +384,8 @@ nav.site-nav.solid{background:rgba(3,6,12,.94);backdrop-filter:blur(20px);paddin
   font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;
   font-weight:500;transition:all .25s;
 }
-.bn-cta.wa{
-  background:linear-gradient(135deg, #25D366, #128C7E);
-  color:#fff;border:1px solid rgba(37,211,102,.45);
-  box-shadow:0 4px 18px rgba(37,211,102,.22);
-}
-.bn-cta.wa:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.4)}
+.bn-cta
+.bn-cta
 .bn-cta.email{
   background:rgba(255,255,255,.05);
   color:var(--mist);
@@ -497,29 +446,12 @@ nav.site-nav.solid{background:rgba(3,6,12,.94);backdrop-filter:blur(20px);paddin
 .closing-tag a{color:var(--sky);text-decoration:none}
 .closing-tag a:hover{text-decoration:underline}
 
-footer.site-footer{background:rgba(1,3,6,.98);padding:3rem 2rem 2rem;border-top:1px solid rgba(0,181,184,.1);position:relative}
-footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%;height:1px;background:linear-gradient(to right,transparent,rgba(0,212,212,.3),transparent);transform:translateX(-50%)}
-.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.2rem}
-.fb .lf{font-family:var(--serif);font-size:1.1rem;color:#fff;font-weight:300;margin-bottom:.4rem}
-.fb .lf em{color:var(--sky);font-style:italic}
-.fb-tag{font-size:.7rem;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.85rem;font-weight:400}
-.fb p{font-size:.78rem;color:var(--ink-3);line-height:1.75;font-weight:300}
-.fc{display:flex;flex-direction:column;gap:.5rem}
-.fc h4{font-family:var(--serif);font-size:.92rem;color:#fff;font-weight:400;margin-bottom:.4rem}
-.fc a{font-size:.74rem;color:var(--ink-3);text-decoration:none;transition:color .2s}
-.fc a:hover{color:var(--sky)}
-.fbot{max-width:1100px;margin:0 auto;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.04);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.68rem;color:var(--ink-4);letter-spacing:.05em}
-
-.wa{position:fixed;bottom:2rem;right:2rem;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.35);z-index:300;transition:transform .25s}
-.wa:hover{transform:scale(1.08)}
-.wa svg{width:28px;height:28px;fill:#fff}
-
 @media (max-width:760px){
   body{cursor:auto}
-  .cur,.cur-r{display:none}
-  nav.site-nav{padding:1rem 1.2rem}
+  .cur,
+  
   .nav-r a:not(.nav-cta):not(.lang){display:none}
-  .nav-r .lang{display:flex}
+  .nav-r 
   .article-hero{padding:7rem 1.5rem 3rem}
   .article-body{padding:3rem 1.5rem 3.5rem}
   .body-inner{max-width:100%}
@@ -527,33 +459,19 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
   .planner-grid{grid-template-columns:1fr}
   .planner-section{padding:4rem 1.5rem}
   .book-notify{padding:4rem 1.5rem}
-  .fi{grid-template-columns:1fr 1fr;gap:1.8rem}
+  
   .pq{padding:1.4rem 1.5rem;margin:2rem 0}
   .pq p{font-size:1.05rem}
 }
 
   </style>
+  <link rel="stylesheet" href="../css/shared.css">
 </head>
 
-<body>
-  <div class="cur"></div>
-  <div class="cur-r"></div>
+<body data-page="blog" data-pathdepth="1" data-lang="id">
+  <div id="cursor-mount"></div>
 
-  <nav class="site-nav">
-    <a href="../index.html" class="nav-logo">Auravale<em>Academy</em></a>
-    <div class="nav-r">
-      <a href="../products.html">Produk</a>
-      <a href="../about.html">Tentang</a>
-      <a href="../schools.html">Sekolah</a>
-      <a href="../programs.html">Program</a>
-      <a href="../blog.html" class="active">Blog</a>
-      <a href="../contact.html" class="nav-cta">Kontak</a>
-      <div class="lang">
-        <a class="lb"    href="30-day-toeic-study-plan.html">EN</a>
-        <a class="lb on" href="persiapan-toeic-30-hari.html">ID</a>
-      </div>
-    </div>
-  </nav>
+  <div id="nav-mount"></div>
 
   <main>
 
@@ -769,65 +687,12 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
 
   </main>
 
-  <footer class="site-footer">
-    <div class="fi">
-      <div class="fb">
-        <div class="lf">Auravale<em>Academy</em></div>
-        <div class="fb-tag">Build tools. Spark change.</div>
-        <p>Pendidikan bahasa Inggris yang terjangkau, menarik, dan jujur. Dimulai dari Indonesia. Menerangi sudut paling gelap.</p>
-      </div>
-      <div class="fc">
-        <h4>Produk</h4>
-        <a href="../products.html">Semua produk</a>
-        <a href="../products.html#young-learners">Anak-anak</a>
-        <a href="../products.html#exam-prep">Persiapan ujian</a>
-        <a href="../products.html#teachers">Paket guru</a>
-      </div>
-      <div class="fc">
-        <h4>Perusahaan</h4>
-        <a href="../about.html">Tentang kami</a>
-        <a href="../schools.html">Untuk sekolah</a>
-        <a href="../programs.html">Program &amp; Kemitraan</a>
-        <a href="../blog.html">Blog</a>
-      </div>
-      <div class="fc">
-        <h4>Hubungi</h4>
-        <a href="../contact.html">Kontak</a>
-        <a href="https://instagram.com/auravaleacademy" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/6281214295431" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-    <div class="fbot">
-      <span>© 2026 Auravale Academy · auravaledistributions@gmail.com</span>
-      <span>Indonesia · Asia Tenggara</span>
-    </div>
-  </footer>
+  <div id="footer-mount"></div>
 
-  <a class="wa" href="https://wa.me/6281214295431" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  <div id="wa-mount"></div>
 
   <script>
     (function(){
-      const c = document.querySelector('.cur');
-      const r = document.querySelector('.cur-r');
-      let mx = 0, my = 0, rx = 0, ry = 0;
-      window.addEventListener('mousemove', e => {
-        mx = e.clientX; my = e.clientY;
-        c.style.left = mx + 'px'; c.style.top = my + 'px';
-      });
-      function loop(){
-        rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-        r.style.left = rx + 'px'; r.style.top = ry + 'px';
-        requestAnimationFrame(loop);
-      }
-      loop();
-
-      const nav = document.querySelector('nav.site-nav');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 30) nav.classList.add('solid');
-        else nav.classList.remove('solid');
-      });
 
       try { localStorage.setItem('auravale_lang', 'id'); } catch(e){}
 
@@ -903,5 +768,6 @@ footer.site-footer::before{content:"";position:absolute;top:0;left:50%;width:40%
     })();
   </script>
 
+  <script src="../js/shared.js"></script>
 </body>
 </html>
