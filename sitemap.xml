@@ -1,39 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ── Homepage ── -->
   <url>
     <loc>https://auravaleacademy.com/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://auravaleacademy.com/about.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <!-- ── Core pages ── -->
   <url>
     <loc>https://auravaleacademy.com/products.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://auravaleacademy.com/programs.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <loc>https://auravaleacademy.com/about.html</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://auravaleacademy.com/schools.html</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://auravaleacademy.com/programs.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://auravaleacademy.com/contact.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Blog ── -->
+  <url>
+    <loc>https://auravaleacademy.com/blog.html</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ── Blog posts ── -->
+  <!-- The two language versions reference each other via xhtml:link.
+       This tells Google they're translations, not duplicates. -->
+
+  <url>
+    <loc>https://auravaleacademy.com/blog/30-day-toeic-study-plan.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/30-day-toeic-study-plan.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/persiapan-toeic-30-hari.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/30-day-toeic-study-plan.html"/>
+  </url>
+
+  <url>
+    <loc>https://auravaleacademy.com/blog/persiapan-toeic-30-hari.html</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/30-day-toeic-study-plan.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/persiapan-toeic-30-hari.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/30-day-toeic-study-plan.html"/>
   </url>
 
 </urlset>
