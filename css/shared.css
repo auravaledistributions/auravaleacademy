@@ -1,0 +1,206 @@
+/* ═══════════════════════════════════════════════════════
+   AURAVALE ACADEMY · shared.css
+   Design tokens, nav, footer, cursor, base typography.
+   Loaded on every page. Page-specific styles stay inline.
+   ═══════════════════════════════════════════════════════ */
+
+/* ── DESIGN TOKENS ────────────────────────────────────── */
+:root{
+  /* Brand colors */
+  --teal:#00B5B8;
+  --aqua:#00D4D4;
+  --sky:#7DE8E8;
+  --mist:#E8F9F9;
+
+  /* Backgrounds */
+  --navy-void:#03060c;
+  --navy-deep:#050912;
+  --navy-mid:#0a1628;
+  --navy-brand:#1A3A5C;
+
+  /* Typography */
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"DM Sans", -apple-system, system-ui, sans-serif;
+
+  /* Ink (text) tones */
+  --ink-1:#f0f8fc;
+  --ink-2:rgba(240,248,252,.75);
+  --ink-3:rgba(240,248,252,.48);
+  --ink-4:rgba(240,248,252,.28);
+
+  /* WhatsApp brand */
+  --wa-green:#25D366;
+  --wa-green-dark:#128C7E;
+}
+
+/* ── BASE ─────────────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--navy-void);scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--navy-void);
+  color:var(--ink-1);
+  overflow-x:hidden;
+  cursor:none;
+  line-height:1.65;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+::selection{background:rgba(0,212,212,.35);color:#fff}
+
+/* ── CUSTOM CURSOR ────────────────────────────────────── */
+.cur{
+  position:fixed;width:7px;height:7px;border-radius:50%;
+  background:rgba(125,232,232,.8);
+  pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:screen;
+  transition:width .2s,height .2s;
+}
+.cur-r{
+  position:fixed;width:28px;height:28px;border-radius:50%;
+  border:1px solid rgba(125,232,232,.25);
+  pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+}
+
+/* ── NAV ──────────────────────────────────────────────── */
+nav.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  padding:1.5rem 2.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:all .5s;
+}
+nav.site-nav.solid{
+  background:rgba(3,6,12,.94);
+  backdrop-filter:blur(20px);
+  padding:1rem 2.5rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:1.2rem;color:#fff;
+  text-decoration:none;
+  font-weight:300;letter-spacing:.04em;
+}
+.nav-logo em{color:var(--sky);font-style:italic}
+.nav-r{display:flex;align-items:center;gap:.15rem}
+.nav-r a{
+  color:rgba(240,248,252,.5);
+  text-decoration:none;
+  font-size:.78rem;
+  padding:.42rem .95rem;
+  border-radius:50px;
+  transition:all .25s;
+  font-weight:300;letter-spacing:.015em;
+}
+.nav-r a:hover{color:#fff;background:rgba(0,212,212,.08)}
+.nav-r a.active{color:var(--sky);background:rgba(0,181,184,.09)}
+.nav-cta{
+  background:rgba(0,181,184,.12) !important;
+  color:var(--sky) !important;
+  border:1px solid rgba(0,181,184,.22) !important;
+}
+
+/* Language toggle */
+.lang{
+  display:flex;
+  background:rgba(255,255,255,.04);
+  border-radius:50px;overflow:hidden;
+  margin-left:.5rem;
+  border:1px solid rgba(255,255,255,.04);
+}
+.lb{
+  padding:.32rem .8rem;
+  font-size:.68rem;
+  color:rgba(255,255,255,.32);
+  cursor:none;border:none;background:transparent;
+  font-family:var(--sans);
+  transition:all .2s;
+  text-decoration:none;
+  display:inline-block;
+}
+.lb.on{
+  background:rgba(0,181,184,.2);
+  color:var(--sky);
+  border-radius:50px;
+}
+.lb:hover{color:rgba(255,255,255,.7)}
+
+/* ── FOOTER ───────────────────────────────────────────── */
+footer.site-footer{
+  background:rgba(1,3,6,.98);
+  padding:3rem 2rem 2rem;
+  border-top:1px solid rgba(0,181,184,.1);
+  position:relative;
+}
+footer.site-footer::before{
+  content:"";position:absolute;
+  top:0;left:50%;width:40%;height:1px;
+  background:linear-gradient(to right,transparent,rgba(0,212,212,.3),transparent);
+  transform:translateX(-50%);
+}
+.fi{
+  max-width:1100px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:2.5rem;
+  margin-bottom:2.2rem;
+}
+.fb .lf{
+  font-family:var(--serif);
+  font-size:1.1rem;color:#fff;
+  font-weight:300;margin-bottom:.4rem;
+}
+.fb .lf em{color:var(--sky);font-style:italic}
+.fb-tag{
+  font-size:.7rem;color:var(--teal);
+  letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:.85rem;font-weight:400;
+}
+.fb p{font-size:.78rem;color:var(--ink-3);line-height:1.75;font-weight:300}
+.fc{display:flex;flex-direction:column;gap:.5rem}
+.fc h4{
+  font-family:var(--serif);
+  font-size:.92rem;color:#fff;
+  font-weight:400;margin-bottom:.4rem;
+}
+.fc a{
+  font-size:.74rem;color:var(--ink-3);
+  text-decoration:none;transition:color .2s;
+}
+.fc a:hover{color:var(--sky)}
+.fbot{
+  max-width:1100px;margin:0 auto;
+  padding-top:1.6rem;
+  border-top:1px solid rgba(255,255,255,.04);
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:.5rem;
+  font-size:.68rem;color:var(--ink-4);
+  letter-spacing:.05em;
+}
+
+/* ── WHATSAPP FAB ─────────────────────────────────────── */
+.wa{
+  position:fixed;bottom:2rem;right:2rem;
+  width:54px;height:54px;border-radius:50%;
+  background:var(--wa-green);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(37,211,102,.35);
+  z-index:300;transition:transform .25s;
+}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+/* ── RESPONSIVE BASE ──────────────────────────────────── */
+@media (max-width:760px){
+  body{cursor:auto}
+  .cur,.cur-r{display:none}
+  nav.site-nav{padding:1rem 1.2rem}
+  .nav-r a:not(.nav-cta):not(.lang){display:none}
+  .nav-r .lang{display:flex}
+  .fi{grid-template-columns:1fr 1fr;gap:1.8rem}
+  .wa{bottom:1.2rem;right:1.2rem;width:48px;height:48px}
+  .wa svg{width:24px;height:24px}
+}
