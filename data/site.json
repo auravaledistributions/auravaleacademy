@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "name": "Auravale",
+    "nameItalic": "Academy",
+    "tagline": "Build tools. Spark change.",
+    "description": "English education, made affordable, engaging, and honest. Starting in Indonesia. Lighting up the darkest corners.",
+    "descriptionId": "Pendidikan bahasa Inggris yang terjangkau, menarik, dan jujur. Dimulai dari Indonesia. Menerangi sudut paling gelap.",
+    "domain": "auravaleacademy.com"
+  },
+  "contact": {
+    "email": "auravaledistributions@gmail.com",
+    "whatsapp": "6281214295431",
+    "whatsappDisplay": "+62 812 1429 5431",
+    "instagram": "auravaleacademy",
+    "instagramUrl": "https://instagram.com/auravaleacademy",
+    "region": "Indonesia · Southeast Asia",
+    "regionId": "Indonesia · Asia Tenggara"
+  },
+  "nav": {
+    "en": [
+      { "label": "Products", "href": "products.html", "key": "products" },
+      { "label": "About",    "href": "about.html",    "key": "about" },
+      { "label": "Schools",  "href": "schools.html",  "key": "schools" },
+      { "label": "Programs", "href": "programs.html", "key": "programs" },
+      { "label": "Blog",     "href": "blog.html",     "key": "blog" },
+      { "label": "Contact",  "href": "contact.html",  "key": "contact", "cta": true }
+    ],
+    "id": [
+      { "label": "Produk",   "href": "products.html", "key": "products" },
+      { "label": "Tentang",  "href": "about.html",    "key": "about" },
+      { "label": "Sekolah",  "href": "schools.html",  "key": "schools" },
+      { "label": "Program",  "href": "programs.html", "key": "programs" },
+      { "label": "Blog",     "href": "blog.html",     "key": "blog" },
+      { "label": "Kontak",   "href": "contact.html",  "key": "contact", "cta": true }
+    ]
+  },
+  "footer": {
+    "en": {
+      "columns": [
+        {
+          "heading": "Products",
+          "links": [
+            { "label": "All products",    "href": "products.html" },
+            { "label": "Young learners",  "href": "products.html#young-learners" },
+            { "label": "Exam prep",       "href": "products.html#exam-prep" },
+            { "label": "Teacher packs",   "href": "products.html#teachers" }
+          ]
+        },
+        {
+          "heading": "Company",
+          "links": [
+            { "label": "About us",                "href": "about.html" },
+            { "label": "For schools",             "href": "schools.html" },
+            { "label": "Programs & Partnerships", "href": "programs.html" },
+            { "label": "Blog",                    "href": "blog.html" }
+          ]
+        },
+        {
+          "heading": "Connect",
+          "links": [
+            { "label": "Contact",   "href": "contact.html" },
+            { "label": "Instagram", "href": "https://instagram.com/auravaleacademy", "external": true },
+            { "label": "WhatsApp",  "href": "https://wa.me/6281214295431", "external": true }
+          ]
+        }
+      ]
+    },
+    "id": {
+      "columns": [
+        {
+          "heading": "Produk",
+          "links": [
+            { "label": "Semua produk",      "href": "products.html" },
+            { "label": "Anak-anak",         "href": "products.html#young-learners" },
+            { "label": "Persiapan ujian",   "href": "products.html#exam-prep" },
+            { "label": "Paket guru",        "href": "products.html#teachers" }
+          ]
+        },
+        {
+          "heading": "Perusahaan",
+          "links": [
+            { "label": "Tentang kami",         "href": "about.html" },
+            { "label": "Untuk sekolah",        "href": "schools.html" },
+            { "label": "Program & Kemitraan",  "href": "programs.html" },
+            { "label": "Blog",                 "href": "blog.html" }
+          ]
+        },
+        {
+          "heading": "Hubungi",
+          "links": [
+            { "label": "Kontak",    "href": "contact.html" },
+            { "label": "Instagram", "href": "https://instagram.com/auravaleacademy", "external": true },
+            { "label": "WhatsApp",  "href": "https://wa.me/6281214295431", "external": true }
+          ]
+        }
+      ]
+    }
+  }
+}
