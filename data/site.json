@@ -11,8 +11,8 @@
     "email": "auravaledistributions@gmail.com",
     "whatsapp": "6281214295431",
     "whatsappDisplay": "+62 812 1429 5431",
-    "instagram": "auravaleacademy",
-    "instagramUrl": "https://instagram.com/auravaleacademy",
+    "instagram": "auravale_academy",
+    "instagramUrl": "https://instagram.com/auravale_academy",
     "region": "Indonesia · Southeast Asia",
     "regionId": "Indonesia · Asia Tenggara"
   },
@@ -59,7 +59,7 @@
           "heading": "Connect",
           "links": [
             { "label": "Contact",   "href": "contact.html" },
-            { "label": "Instagram", "href": "https://instagram.com/auravaleacademy", "external": true },
+            { "label": "Instagram", "href": "https://instagram.com/auravale_academy", "external": true },
             { "label": "WhatsApp",  "href": "https://wa.me/6281214295431", "external": true }
           ]
         }
@@ -89,7 +89,7 @@
           "heading": "Hubungi",
           "links": [
             { "label": "Kontak",    "href": "contact.html" },
-            { "label": "Instagram", "href": "https://instagram.com/auravaleacademy", "external": true },
+            { "label": "Instagram", "href": "https://instagram.com/auravale_academy", "external": true },
             { "label": "WhatsApp",  "href": "https://wa.me/6281214295431", "external": true }
           ]
         }
