@@ -1,8 +1,20 @@
-# Auravale Academy - robots.txt
-# Allow all search engines to crawl the entire site
+# Auravale Academy · robots.txt
 
+# Default: allow all crawlers, full site
 User-agent: *
 Allow: /
+Disallow: /pdfs/Auravale_TOEIC_Planner_Premium.pdf
 
-# Point crawlers to the sitemap
+# Allow Google to crawl images and PDFs for richer results
+User-agent: Googlebot
+Allow: /
+Allow: /pdfs/Auravale_TOEIC_Planner_Free.pdf
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Block paid PDF from being indexed (it's a paid product)
+# Free planner PDF stays indexable for visibility
+
+# Sitemap reference
 Sitemap: https://auravaleacademy.com/sitemap.xml
