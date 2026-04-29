@@ -3,12 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Auravale Academy" />
-<link rel="manifest" href="/site.webmanifest" />
   <title>Blog · Auravale Academy</title>
   <meta name="description" content="Honest writing on English learning, TOEIC, IELTS, and education in Indonesia. Field notes from the team at Auravale Academy.">
 
@@ -116,6 +110,26 @@
 }
 .post-card:hover::before{opacity:1}
 
+/* Pinned / featured card */
+.post-card.pinned{
+  border-color:rgba(0,181,184,.22);
+  background:linear-gradient(135deg, rgba(13,54,80,.42), rgba(7,19,42,.65));
+}
+.post-card.pinned::after{
+  content:"Pinned";
+  position:absolute;
+  top:1.1rem;right:1.4rem;
+  font-family:var(--sans);
+  font-size:.58rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--sky);
+  background:rgba(0,181,184,.12);
+  border:1px solid rgba(0,181,184,.28);
+  border-radius:50px;
+  padding:.18rem .65rem;
+}
+
 .post-meta-row{
   display:flex;align-items:center;gap:.8rem;
   font-size:.68rem;letter-spacing:.12em;
@@ -199,14 +213,13 @@
 @media (max-width:760px){
   body{cursor:auto}
   .cur,
-  
   .nav-r a:not(.nav-cta):not(.lang){display:none}
-  .nav-r 
+  .nav-r
   .blog-hero{padding:7rem 1.5rem 3.5rem}
   .posts-section{padding:3rem 1.2rem 4rem}
   .post-card{padding:1.6rem 1.6rem;gap:1rem}
+  .post-card.pinned::after{top:.85rem;right:.95rem;font-size:.54rem}
   .post-arrow{width:36px;height:36px}
-  
 }
 
   </style>
@@ -237,6 +250,13 @@
   },
   "inLanguage": "en",
   "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Why We Wrote Our Books in Indonesia, for Indonesians",
+      "url": "https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html",
+      "datePublished": "2026-04-29",
+      "inLanguage": "en"
+    },
     {
       "@type": "BlogPosting",
       "headline": "30 Days to a Better TOEIC Score: A Real Study Plan for Busy Indonesians",
@@ -291,6 +311,7 @@
 
         <div class="posts-filter">
           <button class="pf-btn on" data-filter="all">All posts</button>
+          <button class="pf-btn" data-filter="founder">Founder story</button>
           <button class="pf-btn" data-filter="exam-prep">Exam prep</button>
           <button class="pf-btn" data-filter="teaching">Teaching</button>
           <button class="pf-btn" data-filter="learning">Learning</button>
@@ -298,6 +319,29 @@
 
         <div class="post-list">
 
+          <!-- ━━━━━━ Pinned: Founder story ━━━━━━ -->
+          <a href="blog/why-we-wrote-our-books-in-indonesia.html" class="post-card pinned" data-cat="founder">
+            <div>
+              <div class="post-meta-row">
+                <span>April 29, 2026</span>
+                <span class="dot"></span>
+                <span>8 min read</span>
+                <span class="dot"></span>
+                <span class="pill">Founder Story</span>
+              </div>
+              <h2 class="post-title">Why We Wrote Our Books in Indonesia, <em>for Indonesians</em></h2>
+              <p class="post-excerpt">A note from the founders, on why most Western ESL books don't fit the children buying them, and why Auravale was built to fix it.</p>
+              <div class="post-langs">
+                <a href="blog/why-we-wrote-our-books-in-indonesia.html">English</a>
+                <a href="blog/kenapa-kami-menulis-buku-di-indonesia.html">Bahasa Indonesia</a>
+              </div>
+            </div>
+            <div class="post-arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M5 2l6 6-6 6V2z"/></svg>
+            </div>
+          </a>
+
+          <!-- ━━━━━━ TOEIC ━━━━━━ -->
           <a href="blog/30-day-toeic-study-plan.html" class="post-card" data-cat="exam-prep">
             <div>
               <div class="post-meta-row">
@@ -343,7 +387,7 @@
         a.addEventListener('click', e => e.stopPropagation());
       });
 
-      // Filter (placeholder for future tags)
+      // Filter
       document.querySelectorAll('.pf-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('on'));
