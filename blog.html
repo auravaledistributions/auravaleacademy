@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog · Auravale Academy</title>
-  <meta name="description" content="Honest writing on English learning, TOEIC, IELTS, and education in Indonesia. Field notes from the team at Auravale Academy.">
+  <meta name="description" content="Honest writing on English learning, TOEIC, IELTS, parenting, and education in Indonesia. Field notes from the team at Auravale Academy.">
 
   <meta property="og:title" content="Blog · Auravale Academy">
-  <meta property="og:description" content="Honest writing on English learning, TOEIC, IELTS, and education in Indonesia.">
+  <meta property="og:description" content="Honest writing on English learning, TOEIC, IELTS, parenting, and education in Indonesia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://auravaleacademy.com/blog.html">
   <meta property="og:site_name" content="Auravale Academy">
@@ -256,7 +256,7 @@
   <link rel="canonical" href="https://auravaleacademy.com/blog.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog · Auravale Academy">
-  <meta name="twitter:description" content="Honest writing on English learning, TOEIC, IELTS, and education in Indonesia.">
+  <meta name="twitter:description" content="Honest writing on English learning, TOEIC, IELTS, parenting, and education in Indonesia.">
   <meta name="twitter:image" content="https://auravaleacademy.com/megan.jpg">
   <meta property="og:image" content="https://auravaleacademy.com/megan.jpg">
   <meta property="og:image:alt" content="Auravale Academy">
@@ -269,7 +269,7 @@
   "@type": "Blog",
   "url": "https://auravaleacademy.com/blog.html",
   "name": "Auravale Academy Blog",
-  "description": "Honest writing on English learning, TOEIC, IELTS, and education in Indonesia.",
+  "description": "Honest writing on English learning, TOEIC, IELTS, parenting, and education in Indonesia.",
   "isPartOf": {
     "@id": "https://auravaleacademy.com/#website"
   },
@@ -294,10 +294,10 @@
     },
     {
       "@type": "BlogPosting",
-      "headline": "Cara Mengajar Fonik untuk Anak 3 Tahun: 5 Aktivitas yang Benar-Benar Bekerja",
-      "url": "https://auravaleacademy.com/blog/cara-mengajar-fonik-anak-3-tahun.html",
+      "headline": "Is High-Stimulation TV Ruining My Child's Focus?",
+      "url": "https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html",
       "datePublished": "2026-04-29",
-      "inLanguage": "id"
+      "inLanguage": "en"
     },
     {
       "@type": "BlogPosting",
@@ -305,13 +305,6 @@
       "url": "https://auravaleacademy.com/blog/30-day-toeic-study-plan.html",
       "datePublished": "2026-04-22",
       "inLanguage": "en"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "30 Hari Persiapan TOEIC: Jadwal Belajar Nyata untuk Orang Sibuk",
-      "url": "https://auravaleacademy.com/blog/persiapan-toeic-30-hari.html",
-      "datePublished": "2026-04-22",
-      "inLanguage": "id"
     }
   ]
 }
@@ -361,8 +354,8 @@
         <div class="posts-filter">
           <button class="pf-btn on" data-filter="all">All posts</button>
           <button class="pf-btn" data-filter="founder">Founder story</button>
+          <button class="pf-btn" data-filter="parenting">Parenting</button>
           <button class="pf-btn" data-filter="exam-prep">Exam prep</button>
-          <button class="pf-btn" data-filter="teaching">Teaching</button>
           <button class="pf-btn" data-filter="learning">Learning</button>
         </div>
 
@@ -385,6 +378,30 @@
               <div class="post-langs">
                 <a href="blog/why-we-wrote-our-books-in-indonesia.html">English</a>
                 <a href="blog/kenapa-kami-menulis-buku-di-indonesia.html">Bahasa Indonesia</a>
+              </div>
+            </div>
+            <div class="post-arrow" aria-hidden="true">
+              <svg viewBox="0 0 16 16"><path d="M5 2l6 6-6 6V2z"/></svg>
+            </div>
+          </article>
+
+          <!-- ━━━━━━ High-Stimulation TV ━━━━━━ -->
+          <article class="post-card" data-cat="parenting" data-href="blog/high-stimulation-tv-child-focus.html">
+            <div>
+              <div class="post-meta-row">
+                <span>April 29, 2026</span>
+                <span class="dot"></span>
+                <span>8 min read</span>
+                <span class="dot"></span>
+                <span class="pill">Parenting</span>
+              </div>
+              <h2 class="post-title">
+                <a class="post-title-link" href="blog/high-stimulation-tv-child-focus.html">Is High-Stimulation TV Ruining <em>My Child's Focus?</em></a>
+              </h2>
+              <p class="post-excerpt">Cocomelon vs Bluey, the 2011 Virginia study, and an honest answer for parents on what fast-paced TV does to young children's focus. Plus a free Slow TV watch list.</p>
+              <div class="post-langs">
+                <a href="blog/high-stimulation-tv-child-focus.html">English</a>
+                <a href="blog/tv-stimulasi-tinggi-fokus-anak.html">Bahasa Indonesia</a>
               </div>
             </div>
             <div class="post-arrow" aria-hidden="true">
@@ -458,6 +475,38 @@
 
   <script>
     (function(){
+
+      // Make the whole post-card clickable using its data-href attribute.
+      // The headline <a> still works on its own (and is what keyboard / screen-reader
+      // users will use). This handler just lets a click anywhere on the card body
+      // navigate to the post too. Clicks inside .post-langs are excluded so that
+      // the language pills navigate to the language version they advertise instead.
+      document.querySelectorAll('.post-card[data-href]').forEach(card => {
+        card.addEventListener('click', function(e){
+          // If user actually clicked a real link inside the card, let that link work.
+          if (e.target.closest('a')) return;
+          const href = card.getAttribute('data-href');
+          if (!href) return;
+          // Open in new tab if user holds modifier (cmd/ctrl/middle-click is handled by <a>)
+          if (e.metaKey || e.ctrlKey || e.shiftKey) {
+            window.open(href, '_blank');
+          } else {
+            window.location.href = href;
+          }
+        });
+        // Make it keyboard-activatable for accessibility (Enter / Space)
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', function(e){
+          if (e.key === 'Enter' || e.key === ' ') {
+            const target = e.target;
+            // Don't hijack keys when user is on the inner headline link or language pill
+            if (target.closest('a')) return;
+            e.preventDefault();
+            const href = card.getAttribute('data-href');
+            if (href) window.location.href = href;
+          }
+        });
+      });
 
       // Filter
       document.querySelectorAll('.pf-btn').forEach(btn => {
