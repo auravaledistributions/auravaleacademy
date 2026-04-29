@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Teach Phonics to a 3-Year-Old: 5 Activities That Actually Work · Auravale</title>
+  <meta name="description" content="Five concrete phonics activities for 3-year-olds, using things you already have. Rice trays, magnet letters, two-minute songs. From a real teacher.">
+  <meta name="author" content="Auravale Academy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+.article-hero{
+  padding:9rem 2rem 4rem;
+  position:relative;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,181,184,.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(26,58,92,.25), transparent 65%),
+    var(--navy-void);
+}
+.article-hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(0,181,184,.25),transparent);
+}
+.hero-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.crumb{
+  font-family:var(--sans);
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-4);
+  margin-bottom:1.5rem;
+}
+.crumb a{color:var(--teal);text-decoration:none;transition:color .2s}
+.crumb a:hover{color:var(--sky)}
+.crumb .sep{margin:0 .5rem;color:var(--ink-4)}
+.article-eyebrow{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--sky);
+  margin-bottom:1.4rem;
+  font-weight:300;
+}
+.article-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  color:#fff;
+  font-weight:300;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  margin-bottom:1.6rem;
+}
+.article-title em{color:var(--sky);font-style:italic;font-weight:400}
+.article-meta{
+  font-family:var(--sans);
+  font-size:.74rem;
+  color:var(--ink-4);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  display:inline-flex;
+  gap:1rem;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.article-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-4)}
+.article-meta .pill{
+  padding:.25rem .8rem;
+  border:1px solid rgba(0,181,184,.22);
+  border-radius:50px;
+  color:var(--sky);
+  letter-spacing:.08em;
+  font-size:.68rem;
+}
+
+.article-body{
+  padding:4.5rem 2rem 5rem;
+  background:linear-gradient(180deg, var(--navy-void) 0%, var(--navy-deep) 100%);
+}
+.body-inner{max-width:680px;margin:0 auto}
+.article-body p{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  color:var(--ink-2);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:1.5rem;
+}
+.article-body p em{color:var(--sky);font-style:italic}
+.article-body p strong{color:#fff;font-weight:400}
+.article-body p a{color:var(--sky);text-decoration:none;border-bottom:1px solid rgba(125,232,232,.3);transition:border-color .2s}
+.article-body p a:hover{border-color:var(--sky)}
+.article-body h2{
+  font-family:var(--serif);
+  font-size:clamp(1.6rem,3vw,2.1rem);
+  color:#fff;
+  font-weight:400;
+  letter-spacing:-.005em;
+  line-height:1.3;
+  margin:3.5rem 0 1.4rem;
+  padding-top:.5rem;
+  position:relative;
+}
+.article-body h2::before{
+  content:"";display:block;width:36px;height:1px;
+  background:var(--teal);margin-bottom:1.1rem;
+}
+.article-body h2 em{color:var(--sky);font-style:italic}
+.article-body h3{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  color:var(--mist);
+  font-weight:500;
+  letter-spacing:0;
+  margin:2.5rem 0 1rem;
+  line-height:1.35;
+}
+.article-body h3 em{color:var(--sky);font-style:italic;font-weight:400}
+.article-body ul{
+  list-style:none;
+  margin:0 0 1.5rem;
+  padding:0;
+}
+.article-body ul li{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  color:var(--ink-2);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:.9rem;
+  padding-left:1.3rem;
+  position:relative;
+}
+.article-body ul li::before{
+  content:"";position:absolute;left:0;top:.78rem;
+  width:6px;height:1px;background:var(--teal);
+}
+.article-body ul li strong{color:#fff;font-weight:400}
+.article-body ul li em{color:var(--sky);font-style:italic}
+
+.pq{
+  margin:3rem 0;
+  padding:1.8rem 2rem;
+  border-left:2px solid var(--teal);
+  background:linear-gradient(135deg, rgba(0,181,184,.05), rgba(26,58,92,.12));
+  border-radius:0 8px 8px 0;
+}
+.pq p{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.2rem;
+  color:var(--mist);
+  line-height:1.55;
+  margin:0;
+  font-weight:400;
+}
+
+.author-note{
+  margin:3rem 0;
+  padding:1.6rem 1.8rem;
+  background:linear-gradient(135deg, rgba(13,54,80,.32), rgba(7,19,42,.5));
+  border:1px solid rgba(0,181,184,.12);
+  border-radius:14px;
+}
+.author-note p{
+  font-size:.88rem;
+  color:var(--ink-3);
+  line-height:1.75;
+  margin:0;
+  font-style:italic;
+  font-family:var(--serif);
+  font-weight:300;
+}
+
+/* ── BOOK NOTIFY (Little Lights waitlist) ─────────────── */
+.book-notify{
+  padding:6rem 2rem;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,181,184,.1), transparent 70%),
+    radial-gradient(ellipse 60% 60% at 50% 100%, rgba(0,181,184,.08), transparent 65%),
+    var(--navy-deep);
+  position:relative;
+}
+.book-notify::before{
+  content:"";position:absolute;top:0;left:50%;width:50%;height:1px;
+  background:linear-gradient(to right,transparent,rgba(0,212,212,.3),transparent);
+  transform:translateX(-50%);
+}
+.bn-inner{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.bn-eyebrow{
+  font-size:.65rem;font-weight:400;text-transform:uppercase;
+  letter-spacing:.18em;color:var(--teal);margin-bottom:1rem;
+}
+.bn-h2{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem,3.5vw,2.4rem);
+  color:#fff;font-weight:300;
+  margin-bottom:1.2rem;line-height:1.3;
+}
+.bn-h2 em{color:var(--sky);font-style:italic}
+.bn-text{
+  font-family:var(--sans);
+  font-size:.95rem;color:var(--ink-3);
+  line-height:1.8;font-weight:300;
+  margin-bottom:2rem;max-width:580px;
+  margin-left:auto;margin-right:auto;
+}
+.bn-text em{color:var(--sky);font-style:italic}
+.bn-form-wrap{margin-top:1.5rem;max-width:440px;margin-left:auto;margin-right:auto}
+.bn-form{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.bn-form input{
+  flex:1;min-width:240px;
+  padding:.85rem 1.1rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50px;
+  color:#fff;font-family:var(--sans);font-size:.85rem;font-weight:300;
+  outline:none;transition:all .25s;
+}
+.bn-form input:focus{border-color:rgba(0,181,184,.4);background:rgba(255,255,255,.06)}
+.bn-form input::placeholder{color:var(--ink-4)}
+.bn-form button{
+  padding:.85rem 1.5rem;
+  background:rgba(0,181,184,.92);
+  border:1px solid rgba(0,212,212,.5);
+  border-radius:50px;
+  color:#fff;font-family:var(--sans);font-size:.72rem;
+  letter-spacing:.08em;text-transform:uppercase;
+  font-weight:500;cursor:none;transition:all .25s;
+}
+.bn-form button:hover{background:rgba(0,212,212,1)}
+.bn-form button:disabled{opacity:.6;cursor:not-allowed}
+.bn-success{
+  display:none;
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.1rem;
+  color:var(--sky);
+  margin-top:1.2rem;
+  font-weight:300;
+}
+.bn-success.on{display:block}
+.bn-fineprint{
+  margin-top:1rem;
+  font-size:.72rem;color:var(--ink-4);
+  font-family:var(--sans);font-weight:300;
+}
+
+.closing-tag{
+  padding:3rem 2rem 4rem;
+  background:var(--navy-void);
+  text-align:center;
+  border-top:1px solid rgba(0,181,184,.08);
+}
+.closing-tag p{
+  font-family:var(--serif);font-style:italic;
+  font-size:.95rem;color:var(--ink-3);
+  max-width:620px;margin:0 auto;line-height:1.7;
+  font-weight:300;
+}
+.closing-tag a{color:var(--sky);text-decoration:none}
+.closing-tag a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  body{cursor:auto}
+  .cur,.cur-r{display:none}
+  .nav-r a:not(.nav-cta):not(.lang){display:none}
+  .article-hero{padding:7rem 1.5rem 3rem}
+  .article-body{padding:3rem 1.5rem 3.5rem}
+  .body-inner{max-width:100%}
+  .article-body p,.article-body ul li{font-size:.95rem}
+  .book-notify{padding:4.5rem 1.5rem}
+  .pq{padding:1.4rem 1.5rem;margin:2rem 0}
+  .pq p{font-size:1.05rem}
+}
+
+  </style>
+  <link rel="stylesheet" href="../css/shared.css">
+
+  <link rel="canonical" href="https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html">
+  <link rel="alternate" hreflang="en" href="https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html">
+  <link rel="alternate" hreflang="id" href="https://auravaleacademy.com/blog/cara-mengajar-fonik-anak-3-tahun.html">
+  <link rel="alternate" hreflang="x-default" href="https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Teach Phonics to a 3-Year-Old: 5 Activities That Actually Work">
+  <meta name="twitter:description" content="Five concrete phonics activities for 3-year-olds, using things you already have at home. From a real teacher.">
+  <meta name="twitter:image" content="https://auravaleacademy.com/megan.jpg">
+
+  <meta property="og:title" content="How to Teach Phonics to a 3-Year-Old: 5 Activities That Actually Work">
+  <meta property="og:description" content="Five concrete phonics activities for 3-year-olds, using things you already have at home. From a real teacher.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html">
+  <meta property="og:site_name" content="Auravale Academy">
+  <meta property="og:image" content="https://auravaleacademy.com/megan.jpg">
+  <meta property="og:image:alt" content="Auravale Academy">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
+  <meta property="article:published_time" content="2026-04-29">
+  <meta property="article:modified_time" content="2026-04-29">
+  <meta property="article:author" content="Megan Griffith">
+  <meta property="article:section" content="Phonics">
+  <meta property="article:tag" content="phonics, toddlers, parents, English, early literacy">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Teach Phonics to a 3-Year-Old: 5 Activities That Actually Work",
+  "alternativeHeadline": "Five home phonics activities for toddlers, from a teacher who actually teaches them",
+  "url": "https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html",
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29",
+  "inLanguage": "en",
+  "wordCount": 1300,
+  "timeRequired": "PT8M",
+  "description": "Five concrete phonics activities for 3-year-olds, using things you already have at home. Rice trays, magnet letters, two-minute songs.",
+  "keywords": "phonics for 3 year olds, teach phonics at home, toddler phonics activities, early literacy Indonesia, English for kids",
+  "articleSection": "Parenting",
+  "author": {
+    "@type": "Person",
+    "name": "Megan Griffith",
+    "jobTitle": "Founder & Lead Educator at Auravale Academy"
+  },
+  "publisher": {
+    "@id": "https://auravaleacademy.com/#organization"
+  },
+  "isPartOf": {
+    "@id": "https://auravaleacademy.com/#website"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://auravaleacademy.com/megan.jpg"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "Parents of preschool-age children",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "Indonesia"
+    }
+  },
+  "workTranslation": {
+    "@type": "BlogPosting",
+    "url": "https://auravaleacademy.com/blog/cara-mengajar-fonik-anak-3-tahun.html",
+    "inLanguage": "id"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a child start learning phonics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around age 3, most children are ready to recognise letter sounds through play and song. There is no hard cutoff. Starting at 2 is fine. Starting at 5 is also fine. What matters is whether the activity matches your child's developmental stage, not whether you started at the 'right' age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a phonics session be for a 3-year-old?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five to ten minutes maximum. A 3-year-old's attention span is shorter than that, and pushing past it teaches them that phonics is something to dread. Two short sessions a day work better than one long one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should my child memorise the ABC song before learning phonics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The ABC song teaches letter names. Phonics teaches letter sounds. Children need sounds to read, not names. They can learn both at once, but if you have to choose, sounds matter more for reading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my own English is not great?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is fine. Basic phonics sounds (a, b, c, d) do not need a perfect accent. Play audio from YouTube or an app while the activity runs. Your child gets the model from the source, you provide the company. Both matter."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://auravaleacademy.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://auravaleacademy.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Teach Phonics to a 3-Year-Old",
+      "item": "https://auravaleacademy.com/blog/how-to-teach-phonics-3-year-old.html"
+    }
+  ]
+}
+  </script>
+</head>
+
+<body data-page="blog" data-pathdepth="1" data-lang="en">
+  <div id="cursor-mount"></div>
+  <div id="nav-mount"></div>
+
+  <main>
+
+    <article>
+
+      <section class="article-hero">
+        <div class="hero-inner">
+          <div class="crumb">
+            <a href="../index.html">Home</a>
+            <span class="sep">/</span>
+            <a href="../blog.html">Blog</a>
+            <span class="sep">/</span>
+            <span>Teaching Phonics to a 3-Year-Old</span>
+          </div>
+          <div class="article-eyebrow">For parents of preschoolers</div>
+          <h1 class="article-title">How to Teach Phonics to a 3-Year-Old: <em>5 Activities That Actually Work</em></h1>
+          <div class="article-meta">
+            <span>April 29, 2026</span>
+            <span class="dot"></span>
+            <span>8 min read</span>
+            <span class="dot"></span>
+            <span class="pill">Phonics &amp; Reading</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-body">
+        <div class="body-inner">
+
+          <p>If your 3-year-old can't sit still for a 15-minute phonics lesson, they are not the problem. The lesson is. They are doing exactly what a normal 3-year-old does. The fix is not to make your child more patient. It is to change how phonics is being taught.</p>
+
+          <p>I'm an English teacher. I've spent years working with Indonesian families and watching parents try to do the right thing with toddlers. Here is the one thing nobody puts in the parenting books: <strong>phonics for a 3-year-old has to feel like play, not like school.</strong> If your child knows they're being taught, they'll resist. If they think they're playing, they'll ask for it again tomorrow.</p>
+
+          <div class="author-note">
+            <p>A bit of context. I'm a teacher at <a href="../about.html" style="color:var(--sky)">Auravale Academy</a>, where we make English-learning materials for Indonesian families. This post is what I actually do, every week, with parents who ask me how to start. It's not theory.</p>
+          </div>
+
+          <p>The five activities below can start today. No app. No course. No new bookshelf. Just things already in your kitchen, plus five to ten minutes of your day.</p>
+
+          <p>One thing first, before the activities.</p>
+
+          <h2>Phonics versus the ABC song, <em>not the same thing</em></h2>
+
+          <p>This catches most parents out, so let me be quick about it. The ABC song teaches <strong>letter names</strong>: ay, bee, see, dee. Phonics teaches <strong>letter sounds</strong>: a (as in apple), b (as in ball), c (as in cat).</p>
+
+          <p>Children don't need letter names to read. They need sounds. When a child looks at the word "cat" and says "see-ay-tee," they can't read it. When they say "kuh-a-tuh, cat," they're reading.</p>
+
+          <p>The ABC song is fine. You don't need to drop it. But if you only have time for one thing, teach the sounds first.</p>
+
+          <div class="pq">
+            <p>A child who knows the names of all 26 letters still can't read. A child who knows the sounds of all 26 letters will be reading inside a few months.</p>
+          </div>
+
+          <h2>Activity 1: <em>The rice tray</em></h2>
+
+          <p>Pour rice (or sand, or fine salt, or flour) into a flat tray, about half a centimetre deep. Hold your child's hand and trace a letter in the rice with their finger. As you do it, say the sound.</p>
+
+          <p>"Sssss" while drawing S. "Mmmm" while drawing M. Repeat three times, shake the tray to clear the letter, move on to the next one.</p>
+
+          <p>Why this works: a 3-year-old learns through their body, not just their eyes. When their hand traces the shape of a letter, the brain stores the sound and the shape together. This is not my opinion. It's the consensus from the last decade of educational neuroscience.</p>
+
+          <p><strong>Pro tip:</strong> start with the most useful letters first. <strong>S, M, A, T, P, I, N.</strong> These seven letters can build more basic English words than any other combination (sat, man, sit, pin, tin, and so on).</p>
+
+          <h2>Activity 2: <em>Letter hunt around the house</em></h2>
+
+          <p>Hold up one magnetic letter, or write a big letter on paper. Tell your child: "Let's find the letter B. Its sound is buh-buh-buh. What in our house sounds like buh-buh-buh?"</p>
+
+          <p>They'll run. <em>Ball.</em> <em>Book.</em> <em>Bottle.</em> <em>Banana.</em> Each time they bring something, repeat together: "Buh-buh-buh, ball." It doesn't matter if what they bring doesn't actually start with the same sound. The process is the point. After two or three things found, switch letters.</p>
+
+          <p>Why this works: you're connecting letter sounds to your child's real world. They stop being abstract symbols on a page. The B sound now has ball, book, bottle behind it. Children's brains need that kind of attachment for sounds to stick.</p>
+
+          <p>Five to eight minutes, once a day. Enough.</p>
+
+          <h2>Activity 3: <em>The two-minute song</em></h2>
+
+          <p>Search YouTube for "phonics song Jolly Phonics" or "phonics song letter sounds." Pick one you can stand listening to, and play it every morning. At breakfast. In the bath. On the way to school. Your child doesn't need to sit still and pay attention. The song needs to be in the background.</p>
+
+          <p>Three-year-olds learn from repetition, and their brains absorb sounds while they're doing other things. Within two weeks, you'll catch them humming the sounds on their own. Within a month, they'll know all 26.</p>
+
+          <p>Pick one song. Repeat it until they're sick of it. Then change. Repetition is the friend at this age. Variety is the enemy.</p>
+
+          <p><strong>If you're worried about screen time:</strong> if it's audio only (you play it through a speaker without watching the video), it's not screen time. It's like listening to the radio. There is no time limit on educational audio.</p>
+
+          <h2>Activity 4: <em>Reading with your finger</em></h2>
+
+          <p>Open any English picture book you already have. Point to a short word on the page, like "cat." Slide your finger under each letter, one at a time, saying the sound: "kuh, a, tuh, cat."</p>
+
+          <p>Your child will copy the pointing and copy the sound. They don't have to be right. The point is they're seeing the link between a <em>symbol</em> on the page and a <em>sound</em> coming out of your mouth.</p>
+
+          <p>Do two or three words per book and stop. Don't push to read the whole page. What you're building is the understanding that letters make sounds, and sounds make words. That alone is huge for a 3-year-old.</p>
+
+          <h2>Activity 5: <em>Magnet letters on the fridge</em></h2>
+
+          <p>Get a set of magnetic letters. They cost almost nothing online or at any toy shop. Stick them on the fridge at child height.</p>
+
+          <p>No lesson. Every time your child goes into the kitchen, they'll play with them. Every two or three days, you build a short word out of the magnets. Point and say: "This is cat. Kuh-a-tuh, cat." Then walk away. Don't ask them to repeat it.</p>
+
+          <p>After two weeks, most children start arranging letters themselves. First randomly, then in small clusters, then in patterns. This is the most beautiful phase, and your job is to leave it alone and let it happen.</p>
+
+          <h2>What to <em>avoid</em></h2>
+
+          <p>Three mistakes I see constantly:</p>
+
+          <ul>
+            <li><strong>Forcing your child to sit longer.</strong> Five to ten minutes is the cap at age 3. If they're bored at minute four, stop. If you push, you're teaching them that phonics is uncomfortable.</li>
+            <li><strong>Correcting too quickly.</strong> If they get a sound wrong, don't jump in. Calmly say the right one yourself, and move on. Children learn from hearing the correct version many times, not from being told they got it wrong.</li>
+            <li><strong>Comparing to the neighbour's kid.</strong> The neighbour's child is reading "the cat sat on the mat" at age 3. Yours is throwing magnets at the cat. Both are normal. Reading speed at 3 has almost no relationship to adult reading ability.</li>
+          </ul>
+
+          <h2>If your own English <em>isn't great</em></h2>
+
+          <p>Plenty of parents feel embarrassed about teaching phonics because they think their pronunciation isn't good enough. I want to be clear: for a 3-year-old, your pronunciation is good enough.</p>
+
+          <p>Basic phonics sounds (a through z) don't need a perfect accent. If you're not sure of one, play audio from YouTube or an app while the activity runs. Your child hears the model from the source, and gets your company while doing the activity. Both matter.</p>
+
+          <p>The thing more important than pronunciation: <strong>consistency</strong>. Five minutes every day beats one hour once a week. Children need repetition, not perfection.</p>
+
+          <h2>One last thing</h2>
+
+          <p>A 3-year-old who focuses for five minutes on phonics is doing well. A 3-year-old who manages two minutes is also doing well. A 3-year-old who runs off laughing in the middle is doing best of all. That's a successful lesson.</p>
+
+          <p>The success metric at this age is not how many letters they know. It's: <em>do they still want to play with letters tomorrow?</em></p>
+
+          <p>Pick one activity today. If they like it, repeat it tomorrow. If not, try another. There is no wrong answer. It's just play.</p>
+
+        </div>
+      </section>
+
+      <!-- ═══════════ LITTLE LIGHTS WAITLIST ═══════════ -->
+      <section class="book-notify" id="waitlist">
+        <div class="bn-inner">
+          <div class="bn-eyebrow">Coming soon from Auravale</div>
+          <h2 class="bn-h2">Little Lights, <em>26 phonics readers for Indonesian kids</em></h2>
+          <p class="bn-text">We're producing a complete phonics series for Indonesian children aged 2 to 12. One book per letter. Full colour. Set in places your child actually knows. <em>Join the waitlist for early-bird pricing</em> when the books ship. See more on the <a href="../products.html" style="color:var(--sky)">products page</a>.</p>
+          <div class="bn-form-wrap">
+            <form class="bn-form" id="bn-form-en" action="https://formspree.io/f/mqewlqya" method="POST">
+              <input type="email" name="email" placeholder="your@email.com" required>
+              <input type="hidden" name="_subject" value="Waitlist · Little Lights phonics readers">
+              <input type="hidden" name="form_type" value="Waitlist · Little Lights (EN from phonics post)">
+              <input type="hidden" name="resource_tag" value="little-lights-waitlist">
+              <button type="submit">Notify me when it's out</button>
+            </form>
+            <p class="bn-success" id="bn-success-en">Done. We'll write when the books ship.</p>
+            <p class="bn-fineprint">No spam. One email when the series launches, plus the early-bird link. That's it.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="closing-tag">
+        <p>Auravale Academy makes English-language learning materials for Indonesian learners, from preschool through to adults. See our books at <a href="../index.html">auravaleacademy.com</a>.</p>
+      </div>
+
+    </article>
+
+  </main>
+
+  <div id="footer-mount"></div>
+  <div id="wa-mount"></div>
+
+  <script>
+    (function(){
+      try { localStorage.setItem('auravale_lang', 'en'); } catch(e){}
+
+      const bnForm = document.getElementById('bn-form-en');
+      const bnSuccess = document.getElementById('bn-success-en');
+      const fineprint = document.querySelector('.bn-fineprint');
+      if (bnForm) {
+        bnForm.addEventListener('submit', async function(e){
+          e.preventDefault();
+          const btn = bnForm.querySelector('button');
+          const originalText = btn.textContent;
+          btn.textContent = 'Sending...';
+          btn.disabled = true;
+          try {
+            const res = await fetch(bnForm.action, {
+              method: 'POST',
+              body: new FormData(bnForm),
+              headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+              bnForm.style.display = 'none';
+              if (fineprint) fineprint.style.display = 'none';
+              bnSuccess.classList.add('on');
+            } else {
+              btn.textContent = originalText;
+              btn.disabled = false;
+              alert('Something went wrong. Try again.');
+            }
+          } catch(err) {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            alert('Connection issue. Please try again.');
+          }
+        });
+      }
+    })();
+  </script>
+
+  <script src="../js/shared.js"></script>
+</body>
+</html>
