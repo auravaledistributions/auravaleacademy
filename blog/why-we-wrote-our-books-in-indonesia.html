@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why We Wrote Our Books in Indonesia, for Indonesians · Auravale</title>
+  <meta name="description" content="Why most ESL books sold in Indonesia don't fit the children buying them, and why Auravale Academy was built to fix it. From the founders.">
+  <meta name="author" content="Auravale Academy">
+  <meta name="keywords" content="ESL Indonesia, English books for Indonesian children, Auravale Academy, Indonesian English education, Megan Griffith, Arif Suhardinata, founder story, CEFR Indonesia, Kurikulum Merdeka">
+
+  <meta property="og:title" content="Why We Wrote Our Books in Indonesia, for Indonesians">
+  <meta property="og:description" content="Why most ESL books sold in Indonesia don't fit the children buying them, and why Auravale Academy was built to fix it. From the founders.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html">
+  <meta property="og:site_name" content="Auravale Academy">
+  <meta property="article:published_time" content="2026-04-29">
+  <meta property="article:author" content="Megan Griffith">
+  <meta property="article:section" content="Brand &amp; Trust">
+  <meta property="article:tag" content="ESL Indonesia">
+  <meta property="article:tag" content="founder story">
+  <meta property="article:tag" content="Auravale Academy">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+/* ── ARTICLE HERO ─────────────────────────────────────── */
+.article-hero{
+  padding:9rem 2rem 4rem;
+  position:relative;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,181,184,.08), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(26,58,92,.25), transparent 65%),
+    var(--navy-void);
+}
+.article-hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(0,181,184,.25),transparent);
+}
+.hero-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.crumb{
+  font-family:var(--sans);
+  font-size:.68rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-4);
+  margin-bottom:1.5rem;
+}
+.crumb a{color:var(--teal);text-decoration:none;transition:color .2s}
+.crumb a:hover{color:var(--sky)}
+.crumb .sep{margin:0 .5rem;color:var(--ink-4)}
+.article-eyebrow{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--sky);
+  margin-bottom:1.4rem;
+  font-weight:300;
+}
+.article-title{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  color:#fff;
+  font-weight:300;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  margin-bottom:1.6rem;
+}
+.article-title em{color:var(--sky);font-style:italic;font-weight:400}
+.article-meta{
+  font-family:var(--sans);
+  font-size:.74rem;
+  color:var(--ink-4);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  display:inline-flex;
+  gap:1rem;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.article-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-4)}
+.article-meta .pill{
+  padding:.25rem .8rem;
+  border:1px solid rgba(0,181,184,.22);
+  border-radius:50px;
+  color:var(--sky);
+  letter-spacing:.08em;
+  font-size:.68rem;
+}
+
+/* ── ARTICLE BODY ─────────────────────────────────────── */
+.article-body{
+  padding:4.5rem 2rem 5rem;
+  background:linear-gradient(180deg, var(--navy-void) 0%, var(--navy-deep) 100%);
+}
+.body-inner{max-width:680px;margin:0 auto}
+.article-body p{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  color:var(--ink-2);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:1.5rem;
+}
+.article-body p em{color:var(--sky);font-style:italic}
+.article-body p strong{color:#fff;font-weight:400}
+.article-body h2{
+  font-family:var(--serif);
+  font-size:clamp(1.6rem,3vw,2.1rem);
+  color:#fff;
+  font-weight:400;
+  letter-spacing:-.005em;
+  line-height:1.3;
+  margin:3.5rem 0 1.4rem;
+  padding-top:.5rem;
+  position:relative;
+}
+.article-body h2::before{
+  content:"";display:block;width:36px;height:1px;
+  background:var(--teal);margin-bottom:1.1rem;
+}
+.article-body h2 em{color:var(--sky);font-style:italic}
+.article-body h3{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  color:var(--mist);
+  font-weight:500;
+  letter-spacing:0;
+  margin:2.5rem 0 1rem;
+  line-height:1.35;
+}
+.article-body h3 em{color:var(--sky);font-style:italic;font-weight:400}
+.article-body ul{
+  list-style:none;
+  margin:0 0 1.5rem;
+  padding:0;
+}
+.article-body ul li{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  color:var(--ink-2);
+  line-height:1.85;
+  font-weight:300;
+  margin-bottom:.9rem;
+  padding-left:1.3rem;
+  position:relative;
+}
+.article-body ul li::before{
+  content:"";position:absolute;left:0;top:.78rem;
+  width:6px;height:1px;background:var(--teal);
+}
+.article-body ul li strong{color:#fff;font-weight:400}
+.article-body ul li em{color:var(--sky);font-style:italic}
+
+/* Pull quote */
+.pq{
+  margin:3rem 0;
+  padding:1.8rem 2rem;
+  border-left:2px solid var(--teal);
+  background:linear-gradient(135deg, rgba(0,181,184,.05), rgba(26,58,92,.12));
+  border-radius:0 8px 8px 0;
+}
+.pq p{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.2rem;
+  color:var(--mist);
+  line-height:1.55;
+  margin:0;
+  font-weight:400;
+}
+
+/* Author note */
+.author-note{
+  margin:3rem 0;
+  padding:1.6rem 1.8rem;
+  background:linear-gradient(135deg, rgba(13,54,80,.32), rgba(7,19,42,.5));
+  border:1px solid rgba(0,181,184,.12);
+  border-radius:14px;
+}
+.author-note p{
+  font-size:.88rem;
+  color:var(--ink-3);
+  line-height:1.75;
+  margin:0;
+  font-style:italic;
+  font-family:var(--serif);
+}
+.author-note p em{color:var(--sky)}
+
+/* Signoff block */
+.signoff{
+  margin:3.5rem 0 1rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(0,181,184,.12);
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--ink-2);
+  line-height:1.7;
+  font-weight:300;
+}
+.signoff strong{
+  color:#fff;font-style:normal;font-weight:400;
+  display:block;margin-top:.4rem;font-family:var(--serif);
+}
+.signoff em{color:var(--sky)}
+
+/* ── CLOSING TAG ──────────────────────────────────────── */
+.closing-tag{
+  padding:3rem 2rem 4rem;
+  background:var(--navy-void);
+  text-align:center;
+  border-top:1px solid rgba(0,181,184,.08);
+}
+.closing-tag p{
+  font-family:var(--serif);font-style:italic;
+  font-size:.95rem;color:var(--ink-3);
+  max-width:620px;margin:0 auto;line-height:1.7;
+  font-weight:300;
+}
+.closing-tag a{color:var(--sky);text-decoration:none}
+.closing-tag a:hover{text-decoration:underline}
+
+/* ── RESPONSIVE ───────────────────────────────────────── */
+@media (max-width:760px){
+  body{cursor:auto}
+  .cur,
+  .nav-r a:not(.nav-cta):not(.lang){display:none}
+  .nav-r
+  .article-hero{padding:7rem 1.5rem 3rem}
+  .article-body{padding:3rem 1.5rem 3.5rem}
+  .body-inner{max-width:100%}
+  .article-body p,.article-body ul li{font-size:.95rem}
+  .pq{padding:1.4rem 1.5rem;margin:2rem 0}
+  .pq p{font-size:1.05rem}
+}
+
+  </style>
+  <link rel="stylesheet" href="../css/shared.css">
+
+  <link rel="canonical" href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html">
+  <link rel="alternate" hreflang="en" href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html">
+  <link rel="alternate" hreflang="id" href="https://auravaleacademy.com/blog/kenapa-kami-menulis-buku-di-indonesia.html">
+  <link rel="alternate" hreflang="x-default" href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why We Wrote Our Books in Indonesia, for Indonesians">
+  <meta name="twitter:description" content="Why most ESL books sold in Indonesia don't fit the children buying them, and why Auravale Academy was built to fix it. From the founders.">
+  <meta name="twitter:image" content="https://auravaleacademy.com/megan.jpg">
+  <meta property="og:image" content="https://auravaleacademy.com/megan.jpg">
+  <meta property="og:image:alt" content="Auravale Academy">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="id_ID">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why We Wrote Our Books in Indonesia, for Indonesians",
+  "alternativeHeadline": "The Auravale founder story: why Western ESL books don't fit Indonesian children",
+  "url": "https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html",
+  "datePublished": "2026-04-29",
+  "dateModified": "2026-04-29",
+  "inLanguage": "en",
+  "wordCount": 1480,
+  "timeRequired": "PT8M",
+  "description": "Why most ESL books sold in Indonesia don't fit the children buying them, and why Auravale Academy was built to fix it. From the founders.",
+  "keywords": "ESL Indonesia, English books for Indonesian children, Auravale Academy, Indonesian English education, founder story, CEFR Indonesia, Kurikulum Merdeka",
+  "articleSection": "Brand & Trust",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Megan Griffith",
+      "jobTitle": "Co-founder & Lead Educator at Auravale Academy"
+    },
+    {
+      "@type": "Person",
+      "name": "Arif Suhardinata",
+      "jobTitle": "Co-founder & Design Lead at Auravale Academy"
+    }
+  ],
+  "publisher": {
+    "@id": "https://auravaleacademy.com/#organization"
+  },
+  "isPartOf": {
+    "@id": "https://auravaleacademy.com/#website"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://auravaleacademy.com/megan.jpg"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "parent, teacher, school leader",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "Indonesia"
+    }
+  },
+  "translationOfWork": {
+    "@type": "BlogPosting",
+    "url": "https://auravaleacademy.com/blog/kenapa-kami-menulis-buku-di-indonesia.html",
+    "inLanguage": "id"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://auravaleacademy.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://auravaleacademy.com/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Why We Wrote Our Books in Indonesia, for Indonesians",
+      "item": "https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html"
+    }
+  ]
+}
+  </script>
+</head>
+
+<body data-page="blog" data-pathdepth="1" data-lang="en">
+  <div id="cursor-mount"></div>
+
+  <div id="nav-mount"></div>
+
+  <main>
+
+    <article>
+
+      <!-- ═══════════ HERO ═══════════ -->
+      <section class="article-hero">
+        <div class="hero-inner">
+          <div class="crumb">
+            <a href="../index.html">Home</a>
+            <span class="sep">/</span>
+            <a href="../blog.html">Blog</a>
+            <span class="sep">/</span>
+            <span>Why We Wrote Our Books in Indonesia</span>
+          </div>
+          <div class="article-eyebrow">A note from the founders</div>
+          <h1 class="article-title">Why We Wrote Our Books in Indonesia, <em>for Indonesians</em></h1>
+          <div class="article-meta">
+            <span>April 29, 2026</span>
+            <span class="dot"></span>
+            <span>8 min read</span>
+            <span class="dot"></span>
+            <span class="pill">Founder Story</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ BODY ═══════════ -->
+      <section class="article-body">
+        <div class="body-inner">
+
+          <p>The first time I taught from an imported English textbook in Indonesia, a seven-year-old asked me what a daffodil was. The book had a whole unit on them. Yellow flowers, springtime, a poem to memorise. Daffodils don't grow here. Nobody in her class had ever seen one.</p>
+
+          <p>I closed the book. That moment, more than anything else, is why Auravale Academy exists.</p>
+
+          <div class="author-note">
+            <p>I'm Megan, an English teacher from Alaska with eight years of international classroom experience and one published book in Japan behind me. My co-founder Arif is from rural Indonesia, a designer who grew up as exactly the kind of student we now build for. We started Auravale together in 2024. This is why.</p>
+          </div>
+
+          <h2>The imported book problem</h2>
+
+          <p>Walk into a bookshop in Jakarta, Surabaya, Yogyakarta, anywhere in the country, and the English-learning shelves all look the same. Big-name publishers from the UK and the US. Glossy covers. CEFR labels. Prices that make a parent pause.</p>
+
+          <p>The books are not bad books. They're very well-made books. They were just not made for the children buying them.</p>
+
+          <p>That part took me a while to fully see. When you flip through them with an Indonesian seven-year-old at your side, you start noticing things. The classroom in the picture has one child per desk and a teacher who doesn't share her language. The trip to the supermarket goes down a long bright aisle most Indonesian families don't shop in. The character's grandmother lives "in the country" and visits twice a year, instead of being three doors down. The weather pages are about snow, autumn leaves, umbrellas in a London drizzle. Not the wet season in Java. Not the dust of dry-season afternoons.</p>
+
+          <p>None of these are sins. They're just, very visibly, a book made somewhere else, for somewhere else. And what that does to a small child trying to learn a new language is something specific, and worth naming.</p>
+
+          <h2>What it actually feels like to learn from a foreign book</h2>
+
+          <p>When a child meets new vocabulary in a familiar setting, the word goes in easily. They already have the picture, the smell, the feeling, the memory. The new English word slots onto something solid. <em>Apple</em> is easy if you've been eating apples. <em>Becak</em> would be easy too, if a book ever bothered to use it.</p>
+
+          <p>When a child meets new vocabulary in an unfamiliar setting, two new things have to be learned at once. The thing itself, and the word for it. Daffodils. Squirrels. Pumpkins on porches. Snowmen. Cold cereal in cardboard boxes. The cognitive load doubles, and the word doesn't stick as well, because there's nothing solid to attach it to.</p>
+
+          <div class="pq">
+            <p>"You're not just teaching a child English. You're teaching them English, plus a culture they will never live in, and asking them to remember both."</p>
+          </div>
+
+          <p>This isn't about being precious. English is a global language and a child does benefit from understanding that other lives are lived elsewhere. But there's a difference between encountering another culture as a thoughtful add-on and encountering it as the entire frame your language learning sits inside. The first is enrichment. The second is just a little harder than it needs to be.</p>
+
+          <p>Multiply that small extra difficulty across a 200-page book, across a school year, across the eight or nine years a child will be learning English, and the gap between "easier to learn" and "harder to learn" becomes the gap between confidence and quiet shame.</p>
+
+          <h2>What we do differently</h2>
+
+          <p>The Auravale books are written, edited, illustrated, and tested by a small team in Indonesia. Some of us are foreign teachers. Most of us are not. Our drafts get read by Indonesian parents and Indonesian teachers before they get printed, and the feedback they give us shapes the next draft. The illustrations show classrooms that look like the classrooms our readers actually sit in. The food in the worksheets is food a child has actually eaten. The grandmother lives upstairs.</p>
+
+          <p>The pedagogy is still rigorous. CEFR-aligned, A1 through B2. Neuroscience-informed in how we sequence and revisit material, because that part is universal. A child's brain works the same in Bandung as it does in Birmingham. <em>What we change is the world the words are pointing at, not the structure of the learning itself.</em></p>
+
+          <p>That distinction matters. People sometimes assume "local" means "less rigorous." It doesn't. The international experience is where the rigor comes from, the methodology, the editorial standards, the careful sequencing. The local care is where the relevance comes from. You need both, and only one of them can be imported.</p>
+
+          <h2>And then there's the price</h2>
+
+          <p>This is the part nobody likes talking about, so let me say it plainly. An imported English workbook in Indonesia often costs more than a parent's day of work. That's not because the book is precious. It's because of import duties, distribution markups, currency conversion, and the fact that the publisher priced it for a market on the other side of the world.</p>
+
+          <p>Indonesian families weren't the ones who asked for those books to be flown across an ocean. They were the last people consulted on the price tag. And then they're the ones who get told, quietly, by that price, that English is a privilege you can opt into if you happen to have the money for it.</p>
+
+          <p>We don't accept that. Books written and printed in Indonesia, by an Indonesian team, can be sold at Indonesian prices. Full stop. No quality compromise. No thinner paper, no fewer pages. Just the markup that gets you when a book has crossed three countries before it reaches a child's hands, gone.</p>
+
+          <h2>What "for Indonesians" actually means</h2>
+
+          <p>It doesn't mean simpler. It doesn't mean easier. Indonesian children are not less capable than children anywhere else, and writing down to them would be its own kind of insult. The books are challenging. Children have to work to read them.</p>
+
+          <p>"For Indonesians" means the worked example uses rupiah, not pounds. It means the family in the story has cousins who live in the same kampung. It means the teacher's notes are written assuming a class size of 35, not 18. It means our bilingual workbooks have Bahasa on every page, so a parent who never had the chance to learn formal English can still sit down and help their child. It means we map to Kurikulum Merdeka, because that's the curriculum the schools are actually teaching from.</p>
+
+          <p>It means the child opening the book doesn't have to translate their entire world before they're allowed to start learning the language. The world in the book is already theirs.</p>
+
+          <h2>The bigger thing we're trying to do</h2>
+
+          <p>Books are the start of it. They're not the end.</p>
+
+          <p>We're also building the rest of what an Indonesian child needs to actually learn well. Donation cycles to public schools and village teachers. A paid internship program for rural youth. Scholarships for kids who would otherwise never see an international classroom. Partner schools where the books get used, and where we listen back. The reason all of it exists is the same reason the books exist: <em>access to good education shouldn't depend on which side of an ocean you happened to be born on.</em></p>
+
+          <p>This is the version of "publishing" you only get when one of the founders grew up as a rural Indonesian student himself. Arif's perspective is what keeps us from making a Western book with an Indonesian veneer. He's been the kid in the under-resourced classroom. He knows what was missing. So we build the thing that was missing.</p>
+
+          <h2>One last thing</h2>
+
+          <p>I get asked sometimes whether what we're doing is anti-imported-book. It isn't. Some of those books are excellent for the children they were written for. The kids of London, Sydney, Toronto are extremely well served by their publishers, and good for them.</p>
+
+          <p>What we're against is the assumption that those books are also automatically the right ones for a child in Medan. The right book for a child in Medan is, ideally, written by someone who has been in a classroom in Medan, with parents from Medan reviewing the drafts, and printed at a price a Medan family can afford. That's not a radical position. It's just the position we decided to actually act on.</p>
+
+          <p>We're not trying to be Oxford with an Indonesian sticker on it. We're trying to be what Oxford would be if it had started here.</p>
+
+          <div class="signoff">
+            <p>Thanks for reading. If you're a parent, a teacher, or a school leader, have a look around the rest of the site. We'd love for you to be part of this.</p>
+            <strong>Megan &amp; Arif<br>Co-founders, Auravale Academy</strong>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════ CLOSING ═══════════ -->
+      <div class="closing-tag">
+        <p>Auravale Academy builds English-language education materials for Indonesian learners. Phonics readers, exam prep, bilingual workbooks. <a href="../products.html">See the books</a> or <a href="../about.html">read more about us</a>.</p>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <div id="footer-mount"></div>
+
+  <div id="wa-mount"></div>
+
+  <script src="../js/shared.js"></script>
+</body>
+</html>
