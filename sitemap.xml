@@ -46,7 +46,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ── Blog index ── -->
+  <!-- ── Blog ── -->
   <url>
     <loc>https://auravaleacademy.com/blog.html</loc>
     <lastmod>2026-04-29</lastmod>
@@ -54,16 +54,51 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ── Blog posts ── -->
-  <!-- The two language versions reference each other via xhtml:link.
+  <!-- ── Blog posts ──
+       The two language versions reference each other via xhtml:link.
        This tells Google they're translations, not duplicates. -->
 
-  <!-- Founder story · pinned, high priority (EN + ID) -->
+  <!-- YouTube vs Books / Boredom Reset (EN + ID), NEW -->
+  <url>
+    <loc>https://auravaleacademy.com/blog/youtube-vs-books-attention.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/youtube-vs-books-attention.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/anak-tidak-mau-baca-buku.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/youtube-vs-books-attention.html"/>
+  </url>
+
+  <url>
+    <loc>https://auravaleacademy.com/blog/anak-tidak-mau-baca-buku.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/youtube-vs-books-attention.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/anak-tidak-mau-baca-buku.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/youtube-vs-books-attention.html"/>
+  </url>
+
+  <!-- High-Stimulation TV / Slow TV Watch List (EN only for now) -->
+  <url>
+    <loc>https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Founder story (EN + ID) -->
   <url>
     <loc>https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en"
                 href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html"/>
     <xhtml:link rel="alternate" hreflang="id"
@@ -76,40 +111,13 @@
     <loc>https://auravaleacademy.com/blog/kenapa-kami-menulis-buku-di-indonesia.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en"
                 href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html"/>
     <xhtml:link rel="alternate" hreflang="id"
                 href="https://auravaleacademy.com/blog/kenapa-kami-menulis-buku-di-indonesia.html"/>
     <xhtml:link rel="alternate" hreflang="x-default"
                 href="https://auravaleacademy.com/blog/why-we-wrote-our-books-in-indonesia.html"/>
-  </url>
-
-  <!-- High-Stimulation TV / Cocomelon vs Bluey (EN + ID) -->
-  <url>
-    <loc>https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"
-                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
-    <xhtml:link rel="alternate" hreflang="id"
-                href="https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
-  </url>
-
-  <url>
-    <loc>https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en"
-                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
-    <xhtml:link rel="alternate" hreflang="id"
-                href="https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default"
-                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
   </url>
 
   <!-- Phonics for 3-year-olds (EN + ID) -->
