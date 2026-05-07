@@ -85,12 +85,31 @@
                 href="https://auravaleacademy.com/blog/youtube-vs-books-attention.html"/>
   </url>
 
-  <!-- High-Stimulation TV / Slow TV Watch List (EN only for now) -->
+  <!-- High-Stimulation TV / Slow TV Watch List (EN + ID) -->
   <url>
     <loc>https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
+  </url>
+
+  <url>
+    <loc>https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
+    <xhtml:link rel="alternate" hreflang="id"
+                href="https://auravaleacademy.com/blog/tv-stimulasi-tinggi-fokus-anak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default"
+                href="https://auravaleacademy.com/blog/high-stimulation-tv-child-focus.html"/>
   </url>
 
   <!-- Founder story (EN + ID) -->
