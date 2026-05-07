@@ -1243,7 +1243,12 @@ main{padding-top:0}
       document.querySelectorAll('.notify-form').forEach(f => wireForm(f, null));
 
     })();
-  </script>
+<script>
+    (function(){
+      'use strict';
+
+      // Reveals
+      if ('IntersectionObserver' in window){
 
   <script src="js/shared.js"></script>
 </body>
