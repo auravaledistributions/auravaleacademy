@@ -856,14 +856,10 @@ main{padding-top:0}
   <div id="footer-mount"></div>
 
   <div id="wa-mount"></div>
-
-  <!-- Shared behaviour: cursor, nav scroll state, reveal observer, lang toggle -->
+<!-- Page-specific: reveal observer (cursor, nav, footer, WhatsApp all handled by shared.js) -->
   <script>
     (function(){
-      'use strict';);
-      }
-
-      }
+      'use strict';
 
       // Reveals
       if ('IntersectionObserver' in window){
@@ -879,6 +875,7 @@ main{padding-top:0}
 
     })();
   </script>
+
 
   <script src="js/shared.js"></script>
 </body>
