@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You wandered into the dark · Auravale Academy</title>
+  <meta name="description" content="The page you're looking for isn't here. Here are a few guiding lights back.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --navy-void: #03060c;
+  --navy-deep: #07132a;
+  --navy: #0d3650;
+  --teal: #00B5B8;
+  --sky: #7DE8E8;
+  --mist: #C8DDE3;
+  --ink-2: #A8B5BD;
+  --ink-3: #7B8B95;
+  --ink-4: #4A5862;
+  --serif: 'Cormorant Garamond', serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--navy-void);
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-weight: 300;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── DARK FIELD WITH STARS ─────────────────────────── */
+.field {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 95%, rgba(0,181,184,.18), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(13,54,80,.5), transparent 70%),
+    var(--navy-void);
+  overflow: hidden;
+}
+
+/* Subtle drifting stars */
+.field::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1.2px 1.2px at 12% 18%, rgba(255,255,255,.4), transparent 2px),
+    radial-gradient(1px 1px at 58% 22%, rgba(125,232,232,.5), transparent 2px),
+    radial-gradient(1.5px 1.5px at 82% 12%, rgba(255,255,255,.32), transparent 2px),
+    radial-gradient(1px 1px at 28% 64%, rgba(125,232,232,.4), transparent 2px),
+    radial-gradient(1.2px 1.2px at 71% 72%, rgba(255,255,255,.36), transparent 2px),
+    radial-gradient(1px 1px at 92% 48%, rgba(125,232,232,.3), transparent 2px),
+    radial-gradient(1.4px 1.4px at 6% 82%, rgba(255,255,255,.28), transparent 2px),
+    radial-gradient(1px 1px at 44% 8%, rgba(125,232,232,.35), transparent 2px),
+    radial-gradient(1px 1px at 38% 88%, rgba(255,255,255,.3), transparent 2px),
+    radial-gradient(1.2px 1.2px at 64% 50%, rgba(125,232,232,.28), transparent 2px);
+  background-size: 1100px 1100px;
+  opacity: .68;
+  animation: twinkle 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+@keyframes twinkle {
+  0%   { opacity: .5; }
+  100% { opacity: .85; }
+}
+
+/* Soft horizon line at the bottom */
+.field::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,181,184,.35), transparent);
+}
+
+/* ═══════════ SWEEPING SEARCHLIGHT BEAM ═══════════
+   A giant cone of soft teal light, anchored where the lighthouse lamp is,
+   sweeping left-and-right across the page like it is searching for someone.
+   Sits behind the content but in front of the stars.
+*/
+.searchlight {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+.searchlight::before,
+.searchlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 50% 100%;
+}
+/* Outer wide beam, soft edge */
+.searchlight::before {
+  border-left:  130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 90vmax solid rgba(125, 232, 232, 0.085);
+  transform: translate(-50%, -100%) rotate(0deg);
+  filter: blur(28px);
+  animation: sweep 9s ease-in-out infinite alternate;
+}
+/* Inner tighter brighter beam */
+.searchlight::after {
+  border-left:  55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 90vmax solid rgba(125, 232, 232, 0.16);
+  transform: translate(-50%, -100%) rotate(0deg);
+  filter: blur(10px);
+  animation: sweep 9s ease-in-out infinite alternate;
+}
+@keyframes sweep {
+  0%   { transform: translate(-50%, -100%) rotate(-55deg); }
+  50%  { transform: translate(-50%, -100%) rotate(0deg);   }
+  100% { transform: translate(-50%, -100%) rotate(55deg);  }
+}
+
+/* ── INNER ─────────────────────────────────────────── */
+.inner {
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── LIGHTHOUSE ────────────────────────────────────── */
+.lighthouse {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lighthouse svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+/* Soft halo around the lamp itself, gently pulsing */
+.lighthouse::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(125,232,232,.5), rgba(0,181,184,.12) 45%, transparent 70%);
+  animation: lamp 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes lamp {
+  0%, 100% { opacity: .6; transform: translateX(-50%) scale(1); }
+  50%      { opacity: 1;  transform: translateX(-50%) scale(1.08); }
+}
+
+/* ── COPY ──────────────────────────────────────────── */
+.title {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -.015em;
+  margin-bottom: 1.6rem;
+}
+.title em {
+  color: var(--sky);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.code {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .68rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 2.2rem;
+  padding: .25rem .9rem;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 50px;
+}
+
+.lede {
+  font-size: 1rem;
+  color: var(--ink-2);
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lede em {
+  color: var(--sky);
+  font-style: italic;
+}
+
+.sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--mist);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* ── GUIDING LIGHTS ────────────────────────────────── */
+.lights {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.light {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.4rem;
+  background: linear-gradient(135deg, rgba(13,54,80,.42), rgba(7,19,42,.65));
+  border: 1px solid rgba(0,181,184,.15);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.light::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,181,184,.12), transparent 70%);
+  opacity: 0;
+  transition: opacity .35s;
+}
+.light:hover {
+  border-color: rgba(0,181,184,.35);
+  transform: translateX(4px);
+}
+.light:hover::before { opacity: 1; }
+
+.light-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,181,184,.1);
+  border: 1px solid rgba(0,181,184,.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all .3s;
+}
+.light-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--sky);
+}
+.light:hover .light-icon {
+  background: rgba(0,181,184,.2);
+  border-color: rgba(0,181,184,.4);
+}
+
+.light-text {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+.light-text strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -.005em;
+  margin-bottom: .15rem;
+}
+.light-text span {
+  font-family: var(--sans);
+  font-size: .8rem;
+  color: var(--ink-3);
+  font-weight: 300;
+  letter-spacing: .01em;
+}
+
+.light-arrow {
+  flex-shrink: 0;
+  color: var(--ink-4);
+  font-size: 1.2rem;
+  transition: all .3s;
+  position: relative;
+  z-index: 2;
+}
+.light:hover .light-arrow {
+  color: var(--sky);
+  transform: translateX(3px);
+}
+
+/* ── FOOTER LINE ───────────────────────────────────── */
+.tag {
+  margin-top: 3.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--ink-4);
+  letter-spacing: .01em;
+}
+.tag em {
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+/* ── MOBILE ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .field { padding: 4rem 1.5rem; }
+  .lighthouse { width: 64px; height: 64px; margin-bottom: 2rem; }
+  .lighthouse::before { width: 48px; height: 48px; top: 6px; }
+  .title { font-size: 2.4rem; }
+  .lede { font-size: .95rem; }
+  .sub { font-size: 1rem; }
+  .light { padding: .85rem 1.1rem; gap: .8rem; }
+  .light-text strong { font-size: 1rem; }
+  .light-text span { font-size: .76rem; }
+
+  .searchlight::before {
+    border-left-width: 80px;
+    border-right-width: 80px;
+  }
+  .searchlight::after {
+    border-left-width: 32px;
+    border-right-width: 32px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .searchlight::before,
+  .searchlight::after,
+  .lighthouse::before,
+  .field::before {
+    animation: none;
+  }
+  .searchlight::before,
+  .searchlight::after {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <main class="field">
+
+    <!-- The sweeping searchlight: sits behind content, in front of stars -->
+    <div class="searchlight" aria-hidden="true"></div>
+
+    <div class="inner">
+
+      <!-- Lighthouse (static, with a soft pulsing lamp halo) -->
+      <div class="lighthouse" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <!-- top dome -->
+          <circle cx="32" cy="20" r="5" fill="#7DE8E8"/>
+          <!-- light cap -->
+          <rect x="27" y="22" width="10" height="3" rx="1" fill="#00B5B8"/>
+          <!-- top of tower -->
+          <path d="M26 25 L38 25 L36 30 L28 30 Z" fill="#C8DDE3"/>
+          <!-- mid tower (striped) -->
+          <rect x="28" y="30" width="8" height="14" fill="#A8B5BD"/>
+          <rect x="28" y="33" width="8" height="3" fill="#0d3650"/>
+          <rect x="28" y="39" width="8" height="3" fill="#0d3650"/>
+          <!-- base -->
+          <path d="M26 44 L38 44 L40 52 L24 52 Z" fill="#7B8B95"/>
+          <!-- door -->
+          <rect x="30" y="46" width="4" height="6" rx="1" fill="#03060c"/>
+          <!-- ground -->
+          <ellipse cx="32" cy="54" rx="14" ry="2" fill="rgba(0,181,184,0.18)"/>
+        </svg>
+      </div>
+
+      <h1 class="title">You wandered <em>too far into the dark.</em></h1>
+
+      <div class="code">Error 404 &middot; Page not found</div>
+
+      <p class="lede">The page you were looking for isn't here. Maybe it moved. Maybe the link was old. Maybe you were just <em>curious</em>, and the internet, as it does, swallowed something.</p>
+
+      <p class="sub">Here are a few guiding lights to take you back.</p>
+
+      <!-- ═══════════ GUIDING LIGHTS ═══════════ -->
+      <nav class="lights" aria-label="Suggested pages">
+
+        <a href="/" class="light">
+          <div class="light-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M8 1L1 7v8h5v-5h4v5h5V7L8 1z"/></svg>
+          </div>
+          <div class="light-text">
+            <strong>Home</strong>
+            <span>Back to the front door</span>
+          </div>
+          <div class="light-arrow" aria-hidden="true">&rarr;</div>
+        </a>
+
+        <a href="/blog.html" class="light">
+          <div class="light-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M3 2h10v12H3V2zm1.5 3h7v1h-7V5zm0 2.5h7v1h-7v-1zm0 2.5h5v1h-5v-1z"/></svg>
+          </div>
+          <div class="light-text">
+            <strong>The blog</strong>
+            <span>Field notes from the work</span>
+          </div>
+          <div class="light-arrow" aria-hidden="true">&rarr;</div>
+        </a>
+
+        <a href="/products.html" class="light">
+          <div class="light-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="M2 3h4l1 2h7v8H2V3zm5 4v5h6V7H7z"/></svg>
+          </div>
+          <div class="light-text">
+            <strong>The books</strong>
+            <span>What we're building</span>
+          </div>
+          <div class="light-arrow" aria-hidden="true">&rarr;</div>
+        </a>
+
+      </nav>
+
+      <p class="tag"><em>Auravale Academy.</em> Lighting up the darkest corners.</p>
+
+    </div>
+  </main>
+
+</body>
+</html>
